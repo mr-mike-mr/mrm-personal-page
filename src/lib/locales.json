@@ -1,0 +1,24 @@
+{
+    "en": {
+        "1": "Home",
+        "2": "Skills",
+        "3": "Projects",
+        "4": "Tech",
+        "5": "Blog",
+        "6": "Privacy Notice",
+        "7": "We and third parties use cookies and other technologies to improve your experience. By clicking the 'Agree' button, you consent to the use of all cookies and technologies.",
+        "8": "Agree",
+        "9": "Disagree"
+    },
+    "sk": {
+        "1": "Domov",
+        "2": "Dovednosti",
+        "3": "Projekty",
+        "4": "Technika",
+        "5": "Blog",
+        "6": "Oznámenie o ochrane osobných údajov",
+        "7": "My a tretie strany používame súbory cookie a iné technológie na zlepšenie vašich skúseností. Kliknutím na tlačidlo „Súhlasím“ vyjadrujete súhlas s používaním všetkých súborov cookie a technológií.",
+        "8": "Súhlasím",
+        "9": "Nesúhlasím"
+    }
+}

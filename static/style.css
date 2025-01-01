@@ -1,0 +1,103 @@
+/* All */
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+
+/* Body */
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/* Dark theme */
+html.dark {
+    background-color: #121212;
+    color: #F5F5F5;
+}
+html.dark header nav {
+    background-color: #F5F5F5;
+}
+html.dark .routes li a {
+    color: #121212;
+}
+
+/* Light theme */
+html.light {
+    background-color: #F5F5F5;
+    color: #121212;
+}
+html.light header nav {
+    background-color: #121212;
+}
+html.light .routes li a {
+    color: #F5F5F5;
+}
+
+/* +layout layout */
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    padding: 5px;
+    margin: 10px 0px;
+    border-radius: 25px;
+    width: 51%;
+    height: 25px;
+    min-width: 300px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+.routes {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.routes li a {
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0px 15px;
+}
+.routes li a:hover {
+    text-decoration: 2px underline;
+}
+.routes li a img {
+    width: 20px;
+    height: 20px;
+    margin: 0px 3px -2.5px 0px;
+}
+.page_settings {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.page_settings li button {
+    background-color: transparent;
+    border: none;
+}
+.page_settings li button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Home layout */
+/* Skills layout */
+/* Projects layout */
+/* Tech layout */
+/* Blog layout */
