@@ -1,3 +1,4 @@
+<!-- SCRIPT -->
 <script>
 	// get layout children
 	let { children } = $props();
