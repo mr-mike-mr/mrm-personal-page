@@ -4,16 +4,28 @@ h1 {
         weight: 800;
     }
 }
+h2 {
+    font: {
+        size: 20px;
+        weight: 600;
+    }
+}
 p, button {
     font: {
-        size: 14px;
-        weight: 600;
+        size: 15px;
+        weight: 500;
     }
 }
 a {
     font: {
         size: 14px;
         weight: 700;
+    }
+}
+i {
+    font: {
+        size: 14px;
+        weight: 400;
     }
 }
 footer {

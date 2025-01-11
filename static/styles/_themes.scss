@@ -5,11 +5,13 @@
 @mixin theme_template($color1, $color2) {
     background-color: $color1;
     color: $color2;
+
     header {
         nav {
             background-color: $color2;
         }
     }
+
     .routes {
         li {
             a {
@@ -18,9 +20,11 @@
         }
 
     }
+
     .page_settings {
         border-color: $color1;
     }
+
     .cookies_allow_request {
         div {
             button {
@@ -33,13 +37,30 @@
             }
         }
     }
+
     .button {
         color: $color2;
         border-color: $color2;
     }
+
     .button:hover {
         color: $color1;
         background-color: $color2;
+    }
+
+    .links {
+        div {
+            background-color: $color2;
+
+            svg {
+                path {
+                    fill: $color1;
+                }
+            }
+            a {
+                color: $color1;
+            }
+        }
     }
 }
 

@@ -1,8 +1,3 @@
-// imports
-@import "themes";
-@import "layouts";
-@import "fonts_size";
-
 // all
 * {
     font: {
@@ -10,16 +5,20 @@
         optical-sizing: auto;
     }
 }
-// remove margin and padding
+// body
 html, body {
     margin: 0;
     padding: 0;
-}
-// body
-body {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+}
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+// imports
+@import "themes";
+@import "layouts";
+@import "font_size";
