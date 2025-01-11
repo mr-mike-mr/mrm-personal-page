@@ -1,0 +1,54 @@
+// imports
+@import "colors";
+
+// template
+@mixin theme_template($color1, $color2) {
+    background-color: $color1;
+    color: $color2;
+    header {
+        nav {
+            background-color: $color2;
+        }
+    }
+    .routes {
+        li {
+            a {
+                color: $color1;
+            }
+        }
+
+    }
+    .page_settings {
+        border-color: $color1;
+    }
+    .cookies_allow_request {
+        div {
+            button {
+                color: $color2;
+                border-color: $color2;
+            }
+            button:hover {
+                color: $color1;
+                background-color: $color2;
+            }
+        }
+    }
+    .button {
+        color: $color2;
+        border-color: $color2;
+    }
+    .button:hover {
+        color: $color1;
+        background-color: $color2;
+    }
+}
+
+// dark
+html.dark {
+    @include theme_template($dark, $light);
+}
+
+// light
+html.light {
+    @include theme_template($light, $dark);
+}

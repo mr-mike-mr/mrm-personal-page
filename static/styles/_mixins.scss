@@ -1,0 +1,14 @@
+@mixin click_animation_transition($time) {
+    transition: transform $time ease;
+    -webkit-transition: transform $time ease;
+    -moz-transition: transform $time ease;
+    -ms-transition: transform $time ease;
+    -o-transition: transform $time ease;
+}
+@mixin click_animation_scale($scale) {
+    transform: scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+}

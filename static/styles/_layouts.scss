@@ -1,0 +1,132 @@
+// imports
+@import "colors";
+@import "fonts_size";
+@import "mixins";
+
+// BUTTON
+.button {
+    width: 200px;
+    height: 35px;
+    margin: 10px;
+    border: 2px solid;
+    background-color: transparent;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    @include click_animation_transition(0.2);
+}
+.main_button {
+    font-weight: 700 !important;
+}
+.button:active {
+    @include click_animation_scale(0.9);
+}
+
+// HEADER
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        padding: 5px;
+        margin: 10px 0px;
+        border-radius: 25px;
+        width: 51%;
+        height: 25px;
+        min-width: 300px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+    }
+
+}
+// ROUTES
+.routes {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    li {
+        a {
+            text-decoration: none;
+            margin: 0px 15px;
+            display: flex;
+            flex-wrap: nowrap;
+            @include click_animation_transition(0.2);
+            img {
+                width: 15px;
+                height: 15px;
+                margin: 2px 3px 0px 0px;
+            }
+        }
+        a:hover {
+            text-decoration: underline 2px;
+        }
+        a:active {
+            @include click_animation_scale(0.9);
+        }
+    }
+
+
+}
+// PAGE SETTINGS
+.page_settings {
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px 5px 0px 5px;
+    border-left: 0.5px solid;
+    li {
+        button {
+            background-color: transparent;
+            border: none;
+            margin: 2px 0px 0px 0px;
+            @include click_animation_transition(0.2);
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        button:active {
+            @include click_animation_scale(0.9);
+        }
+    }
+}
+
+// COOKIES ALLOW REQUEST
+.cookies_allow_request {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    min-width: 320px;
+    text-align: center;
+}
+
+// FOOTER
+footer {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    color: $gery;
+}
+
+/* HOME layout */
+/* SKILLS layout */
+/* PROJECTS layout */
+/* TECH layout */
+/* BLOG layout */

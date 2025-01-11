@@ -131,10 +131,10 @@
 		<div>
 			<!-- AGREE BUTTON -->
 			<!-- svelte-ignore event_directive_deprecated -->
-			<button class="agree_button" on:click={()=> {Cookies.set("cookie_allow", "true", { expires: 365, secure: true, sameSite:"strict", domain: window.location.hostname }); cookies_allowed = true;}}>{locales[$lang]["8"]}</button>
+			<button class="button main_button" on:click={()=> {Cookies.set("cookie_allow", "true", { expires: 365, secure: true, sameSite:"strict", domain: window.location.hostname }); cookies_allowed = true;}}>{locales[$lang]["8"]}</button>
 			<!-- DISAGREE BUTTON -->
 			<!-- svelte-ignore event_directive_deprecated -->
-			<button class="disagree_button"  on:click={()=> {Cookies.set("cookie_allow", "false", { expires: 1, secure: true, sameSite:"strict", domain: window.location.hostname }); cookies_allowed = false;}}>{locales[$lang]["9"]}</button>
+			<button class="button"  on:click={()=> {Cookies.set("cookie_allow", "false", { expires: 1, secure: true, sameSite:"strict", domain: window.location.hostname }); cookies_allowed = false;}}>{locales[$lang]["9"]}</button>
 		</div>
 	</div>
 {:else}
