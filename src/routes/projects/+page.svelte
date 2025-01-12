@@ -1,3 +1,4 @@
+<!-- SCRIPT -->
 <script>
 	// import assets
 	import arrow_left_circle_icon from "$lib/assets/icons/arrow_left_circle.svg";

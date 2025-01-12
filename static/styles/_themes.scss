@@ -69,6 +69,24 @@
             }
         }
     }
+
+    .line_text {
+        color: $color2;
+    }
+
+    .line_text::before, .line_text::after {
+        background: $color2;
+    }
+
+    .tech_container {
+        div {
+            background-color: $color2;
+
+            a {
+                color: $color1;
+            }
+        }
+    }
 }
 
 // dark

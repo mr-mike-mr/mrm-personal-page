@@ -1,3 +1,4 @@
+<!-- SCRIPT -->
 <script>
 	// import assets
 	import case_image from '$lib/assets/tech/case.png';
@@ -9,12 +10,14 @@
 	import gpu_image from '$lib/assets/tech/gpu.png';
 	import ssd_image from '$lib/assets/tech/ssd.png';
 	import psu_image from '$lib/assets/tech/psu.png';
-	import main_monitor_image from '$lib/assets/tech/main_monitor.jpg';
+	import main_monitor_image from '$lib/assets/tech/main_monitor.png';
 	import second_monitor_image from '$lib/assets/tech/second_monitor.png';
 	import monitor_holder_image from '$lib/assets/tech/monitor_holder.png';
 	import led_light_strip_image from '$lib/assets/tech/led_light_strip.png';
-	import keyboard_image from '$lib/assets/tech/keyboard.png';
-	import mouse_image from '$lib/assets/tech/mouse.png';
+    import keyboard_image from '$lib/assets/tech/keyboard.png';
+    import keycaps_image from '$lib/assets/tech/keycaps.png';
+    import switches_image from '$lib/assets/tech/switches.png';
+    import mouse_image from '$lib/assets/tech/mouse.png';
 	import mouse_pad_image from '$lib/assets/tech/mouse_pad.png';
 	import microphone_image from '$lib/assets/tech/microphone.png';
 	import headphone_image from '$lib/assets/tech/headphone.png';
@@ -27,55 +30,164 @@
 	import hdd_reduction_image from '$lib/assets/tech/hdd_reduction.png';
 </script>
 
-<!-- TODO: ADD OF DISTRIBUTOR LINKS -->
-
+<!-- TECH ROOT -->
 <div class="tech_root">
-    <div class="tech_pc">
-        <div class="text_from_lines">My PC</div>
+    <!-- LINE TEXT -->
+    <div class="line_text">My PC</div>
+    <!-- TECH CONTAINER -->
+    <div class="tech_container">
+        <!-- CASE -->
         <div>
-            <a target="_blank" href="https://www.alza.sk/cooler-master-masterbox-q300l-d5263683.htm"><img alt="Case" src={case_image} /> Case</a>
-            <a target="_blank" href="https://www.alza.sk/arctic-p12-pwm-120-mm-d5524594.htm"><img alt="Fan's" src={fans_image} /> Fan's</a>
-            <a target="_blank" href="https://www.alza.sk/asus-prime-a320m-k-d5089813.htm"><img alt="Motherboard" src={motherboard_image} /> Motherboard</a>
-            <a target="_blank" href="https://www.alza.sk/amd-ryzen-3-1200-d5072232.htm"><img alt="CPU" src={cpu_image} /> CPU</a>
-            <a target="_blank" href="https://www.alza.sk/arctic-alpine-23-co-d6363663.htm"><img alt="CPU cooler" src={cpu_cooler_image} /> CPU cooler</a>
-            <a target="_blank" href="https://www.alza.sk/kingston-fury-16-gb-kit-ddr4-3200-mhz-cl16-beast-black-d6622616.htm"><img alt="RAM" src={ram_image} /> RAM</a>
-            <a target="_blank" href="https://www.alza.sk/msi-gtx-1060-armor-6g-ocv1-d4480942.htm"><img alt="GPU" src={gpu_image} /> GPU</a>
-            <a target="_blank" href="https://www.alza.sk/gigabyte-gen3-2500e-500-gb-d7772175.htm"><img alt="SSD" src={ssd_image} /> SSD</a>
-            <a target="_blank" href="https://www.alza.sk/silverstone-strider-essential-80plus-st60f-es230-600-w-d5249930.htm"><img alt="PSU" src={psu_image} /> PSU</a>
+            <img alt="Case" src={case_image} />
+            <a target="_blank" href="https://www.coolermaster.com/en-global/products/masterbox-q300l/">Case</a>
+        </div>
+        <!-- FANS -->
+        <div>
+            <img alt="Fan's" src={fans_image} />
+            <a target="_blank" href="https://www.arctic.de/en/P12-PWM/ACFAN00119A">Fan's</a>
+        </div>
+        <!-- MOTHERBOARD -->
+        <div>
+            <img alt="Motherboard" src={motherboard_image} />
+            <a target="_blank" href="https://www.asus.com/motherboards-components/motherboards/prime/prime-a320m-k/">Motherboard</a>
+        </div>
+        <!-- CPU -->
+        <div>
+            <img alt="CPU" src={cpu_image} />
+            <a target="_blank" href="https://www.techpowerup.com/cpu-specs/ryzen-3-1200.c1899">CPU</a>
+        </div>
+        <!-- CPU COOLER -->
+        <div>
+            <img alt="CPU cooler" src={cpu_cooler_image} />
+            <a target="_blank" href="https://www.arctic.de/en/Alpine-23/ACALP00035A">CPU cooler</a>
+        </div>
+        <!-- RAM -->
+        <div>
+            <img alt="RAM" src={ram_image} />
+            <a target="_blank" href="https://www.kingston.com/en/memory/gaming/kingston-fury-beast-ddr4-memory?speed=2666mt%2Fs&total%20(kit)%20capacity=16gb&kit=kit%20of%202&dram%20density=8gbit">RAM</a>
+        </div>
+        <!-- GPU -->
+        <div>
+            <img alt="GPU" src={gpu_image} />
+            <a target="_blank" href="https://www.msi.com/Graphics-Card/GeForce-GTX-1060-ARMOR-6G-OCV1/Specification">GPU</a>
+        </div>
+        <!-- SSD -->
+        <div>
+            <img alt="SSD" src={ssd_image} />
+            <a target="_blank" href="https://www.gigabyte.com/SSD/GIGABYTE-Gen3-2500E-SSD-500GB">SSD</a>
+        </div>
+        <!-- PSU -->
+        <div>
+            <img alt="PSU" src={psu_image} />
+            <a target="_blank" href="https://www.silverstonetek.com/en/product/info/power-supplies/ST60F-ES230/">PSU</a>
         </div>
     </div>
 
-    <div class="tech_accessory">
-        <div class="text_from_lines">My accessory</div>
+    <!-- LINE TEXT -->
+    <div class="line_text">My accessory</div>
+    <!-- TECH CONTAINER -->
+    <div class="tech_container">
+        <!-- MAIN MONITOR -->
         <div>
-            <a target="_blank" href="https://www.alza.sk/msi-pro-mp225-d12695067.htm"><img alt="Main monitor" src={main_monitor_image} /> Main Monitor</a>
-            <a target="_blank" href="https://www.refurbished.sk/lcd-dell-24-u2410f-blacksilver-149088"><img alt="Second monitor" src={second_monitor_image} /> Second Monitor</a>
-            <a target="_blank" href="https://www.tonerpartner.sk/sos-1720-plyn-drziak-dual-stell-28903sk/"><img alt="Monitor holder" src={monitor_holder_image} /> Monitor holder</a>
-            <a target="_blank" href="https://www.alza.sk/sonoff-l2-lite-smart-led-light-strip-1-5-m-d6796884.htm"><img alt="LED light strip" src={led_light_strip_image} /> LED light strip</a>
-            <a target="_blank" href="https://www.alza.sk/logitech-g413-tkl-se-mechanical-gaming-keyboard-black-us-intl-d6944846.htm"><img alt="Keyboard" src={keyboard_image} /> Keyboard</a>
-            <a target="_blank" href="https://www.nay.sk/msi-clutch-dm07-cierna"><img alt="Mouse" src={mouse_image} /> Mouse</a>
-            <a target="_blank" href="https://www.alza.sk/hyperx-plusefire-mat-l-d7059034.htm"><img alt="Mouse pad" src={mouse_pad_image} /> Mouse pad</a>
-            <a target="_blank" href="https://www.alza.sk/trust-gxt-212-mico-cerveny-d6235588.htm"><img alt="Microphone" src={microphone_image} /> Microphone</a>
-            <a target="_blank" href="https://www.alza.sk/steelseries-arctis-nova-1x-d7366334.htm"><img alt="Headphone" src={headphone_image} /> Headphone</a>
-            <a target="_blank" href="https://www.alza.sk/axagon-hue-p1a-round-hub-usb-a-d6588597.htm"><img alt="USB hub" src={usb_hub_image} /> USB hub</a>
+            <img alt="Main monitor" src={main_monitor_image} />
+            <a target="_blank" href="https://www.msi.com/Business-Productivity-Monitor/PRO-MP225">Main Monitor</a>
+        </div>
+        <!-- SECOND MONITOR -->
+        <div>
+            <img alt="Second monitor" src={second_monitor_image} />
+            <a target="_blank" href="https://www.amazon.com/Dell-UltraSharp-Widescreen-Performance-DisplayPort/dp/B00302DNZ4">Second Monitor</a>
+        </div>
+        <!-- MONITOR HOLDER -->
+        <div>
+            <img alt="Monitor holder" src={monitor_holder_image} />
+            <a target="_blank" href="https://drziaky-a-stojany-na-tv-a-monitory.heureka.sk/stell-sos-1720/#prehlad/">Monitor holder</a>
+        </div>
+        <!-- LED LIGHT STRIP -->
+        <div>
+            <img alt="LED light strip" src={led_light_strip_image} />
+            <a target="_blank" href="https://www.sonoff.sk/kategoria/svetla-a-ziarovky/sonoff-l2-lite-pasik-5m-interierovy-rgb-wifi-led-pasik/">LED light strip</a>
+        </div>
+        <!-- KEYBOARD -->
+        <div>
+            <img alt="Keyboard" src={keyboard_image} />
+            <a target="_blank" href="https://allegro.cz/nabidka/mechanicka-klavesnice-chimera-wireless-16889209861?utm_medium=detail_redirect&utm_source=czc_detail&utm_campaign=kompaktni_klavesnice">Keyboard</a>
+        </div>
+        <!-- KEYCAPS -->
+        <div>
+            <img alt="Keycaps" src={keycaps_image} />
+            <a target="_blank" href="https://darkproject.eu/product/87-fuji?model=DPO87_GSH_FUJI_ANSI">Keycaps</a>
+        </div>
+        <!-- SWITCHES -->
+        <div>
+            <img alt="Switches" src={switches_image} />
+            <a target="_blank" href="https://www.gateron.co/products/gateron-phantom-switch-set">Switches</a>
+        </div>
+        <!-- MOUSE -->
+        <div>
+            <img alt="Mouse" src={mouse_image} />
+            <a target="_blank" href="https://www.msi.com/Gaming-Gear/CLUTCH-DM07">Mouse</a>
+        </div>
+        <!-- MOUSE PAD -->
+        <div>
+            <img alt="Mouse pad" src={mouse_pad_image} />
+            <a target="_blank" href="https://hyperx.com/products/hyperx-pulsefire-mat-gaming-mouse-pad-l?variant=42135502749853">Mouse pad</a>
+        </div>
+        <!-- MICROPHONE -->
+        <div>
+            <img alt="Microphone" src={microphone_image} />
+            <a target="_blank" href="https://www.trust.com/en/product/23791-gxt-212-mico-usb-microphone">Microphone</a>
+        </div>
+        <!-- HEADPHONE -->
+        <div>
+            <img alt="Headphone" src={headphone_image} />
+            <a target="_blank" href="https://steelseries.com/gaming-headsets/arctis-nova-1x">Headphone</a>
+        </div>
+        <!-- USB HUB -->
+        <div>
+            <img alt="USB hub" src={usb_hub_image} />
+            <a target="_blank" href="https://axagon.eu/sk/produkty/hue-p1a">USB hub</a>
         </div>
     </div>
 
-    <div class="tech_every_day_carry">
-        <div class="text_from_lines">My every day carry</div>
+    <!-- LINE TEXT -->
+    <div class="line_text">My every day carry</div>
+    <!-- TECH CONTAINER -->
+    <div class="tech_container">
+        <!-- PHONE -->
         <div>
-            <a target="_blank" href="https://mobilne-telefony.heureka.sk/oppo-reno7-lite-5g-8gb-128gb/#prehlad/"><img alt="Phone" src={phone_image} /> Phone</a>
-            <a target="_blank" href="https://www.alza.sk/cmf-by-nothing-buds-pro-dark-grey-d7962874.htm"><img alt="Earphone" src={earphone_image} /> Earphone</a>
+            <img alt="Phone" src={phone_image} />
+            <a target="_blank" href="https://mobilne-telefony.heureka.sk/oppo-reno7-lite-5g-8gb-128gb">Phone</a>
+        </div>
+        <!-- EARPHONE -->
+        <div>
+            <img alt="Earphone" src={earphone_image} />
+            <a target="_blank" href="https://cmf.tech/en-sk/pages/buds-pro">Earphone</a>
         </div>
     </div>
 
-    <div class="tech_rpi">
-        <div class="text_from_lines">My every day carry</div>
+    <!-- LINE TEXT -->
+    <div class="line_text">My every day carry</div>
+    <!-- TECH CONTAINER -->
+    <div class="tech_container">
+        <!-- RPI -->
         <div>
-            <a target="_blank" href="https://rpishop.cz/raspberry-pi-4/1598-raspberry-pi-4-model-b-4gb-ram.html"><img alt="RPi" src={rpi_image} /> RPi</a>
-            <a target="_blank" href="https://rpishop.cz/raspberry-pi-4/1901-chladici-sada-krabicka-pro-raspberry-pi-4b-cerna.html"><img alt="RPi cooler" src={rpi_cooler_image} /> RPi cooler</a>
-            <a target="_blank" href="https://www.ebay.com/itm/224900061136"><img alt="RPi hdd" src={rpi_hdd_image} /> RPi hdd</a>
-            <a target="_blank" href="https://www.alza.sk/axagon-adsa-fp2-fastport2-d4256878.htm"><img alt="RPi reduction" src={hdd_reduction_image} /> RPi reduction</a>
+            <img alt="RPi" src={rpi_image} />
+            <a target="_blank" href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/">RPi</a>
+        </div>
+        <!-- RPI COOLER -->
+        <div>
+            <img alt="RPi cooler" src={rpi_cooler_image} />
+            <a target="_blank" href="https://shop.pimoroni.com/products/aluminium-heatsink-case-for-raspberry-pi-4?variant=29430673178707">RPi cooler</a>
+        </div>
+        <!-- RPI HDD -->
+        <div>
+            <img alt="RPi hdd" src={rpi_hdd_image} />
+            <a target="_blank" href="https://www.ebay.com/itm/224900061136">RPi hdd</a>
+        </div>
+        <!-- RPI REDUCTION -->
+        <div>
+            <img alt="RPi reduction" src={hdd_reduction_image} />
+            <a target="_blank" href="https://axagon.eu/sk/produkty/adsa-fp2">RPi reduction</a>
         </div>
     </div>
 </div>

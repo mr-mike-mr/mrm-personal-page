@@ -10,12 +10,12 @@
     margin: 10px;
     border: 2px solid;
     background-color: transparent;
+    @include click_animation_transition(0.2);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    @include click_animation_transition(0.2);
 }
 .button:active {
     @include click_animation_scale(0.9);
@@ -25,7 +25,6 @@
 header {
     display: flex;
     justify-content: center;
-
     width: 100vw;
     background-color: transparent;
 
@@ -35,14 +34,13 @@ header {
         align-content: center;
         justify-content: space-between;
         flex-wrap: nowrap;
-
-        overflow: hidden;
-        padding: 5px;
-        margin: 10px 0;
-        border-radius: 25px;
         width: 51%;
         min-width: 300px;
         height: 25px;
+        padding: 5px;
+        margin: 10px 0;
+        overflow: hidden;
+        border-radius: 25px;
         -webkit-border-radius: 25px;
         -moz-border-radius: 25px;
         -ms-border-radius: 25px;
@@ -53,10 +51,9 @@ header {
 // ROUTES
 .routes {
     display: flex;
-
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
     overflow-x: scroll;
     overflow-y: hidden;
     // TODO: CUSTOM SCROLL BAR
@@ -65,9 +62,8 @@ header {
         a {
             display: flex;
             flex-wrap: nowrap;
-
-            text-decoration: none;
             margin: 0 15px;
+            text-decoration: none;
             @include click_animation_transition(0.2);
 
             &:hover {
@@ -87,17 +83,16 @@ header {
 // PAGE SETTINGS
 .page_settings {
     display: flex;
-
-    list-style: none;
     margin: 0;
     padding: 0 5px 0 5px;
+    list-style: none;
     border-left: 0.5px solid;
 
     li {
         button {
-            background-color: transparent;
-            border: none;
             margin: 2px 0 0 0;
+            border: none;
+            background-color: transparent;
             @include click_animation_transition(0.2);
 
             &:active {
@@ -117,7 +112,6 @@ header {
     justify-content: center;
     flex-direction: column;
     flex: 1;
-
     width: 40%;
     min-width: 320px;
     text-align: center;
@@ -125,8 +119,8 @@ header {
 
 // FOOTER
 footer {
+    position: fixed;
     bottom: 0;
-    position: absolute;
     text-align: center;
     color: $gery;
 }
@@ -157,14 +151,13 @@ footer {
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-
         width: 100%;
         min-width: 300px;
 
         img {
-            margin: 0;
             width: 300px;
             height: 300px;
+            margin: 0;
             border-radius: 25%;
             -webkit-border-radius: 25%;
             -moz-border-radius: 25%;
@@ -193,20 +186,19 @@ footer {
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-
         min-width: 300px;
         max-width: 800px;
 
         div {
+            width: 150px;
             margin: 5px 5px;
             padding: 5px 10px;
-            width: 150px;
+            text-align: center;
             border-radius: 50px;
             -webkit-border-radius: 50px;
             -moz-border-radius: 50px;
             -ms-border-radius: 50px;
             -o-border-radius: 50px;
-            text-align: center;
 
             svg {
                 width: 20px;
@@ -215,7 +207,6 @@ footer {
             }
             a {
                 display: inline-block;
-
                 @include click_animation_transition(0.2);
 
                 font: {
@@ -242,7 +233,6 @@ footer {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
     width: 46%;
     min-width: 300px;
 
@@ -251,21 +241,19 @@ footer {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-
+        margin: 10px;
+        height: 150px;
+        width: 100px;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-        margin: 10px;
-        height: 150px;
-        width: 100px;
 
         svg {
             width: 65px;
             height: 65px;
             margin: 20px 0;
-
         }
         a {
             @include click_animation_transition(0.2);
@@ -284,6 +272,74 @@ footer {
     }
 }
 
-/* PROJECTS layout */
-/* TECH layout */
-/* BLOG layout */
+// TODO: PROJECTS
+
+
+// TECH
+.tech_root {
+    width: 46%;
+    min-width: 300px;
+}
+.line_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.line_text::before, .line_text::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    margin: 0 10px;
+}
+.tech_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 0 50px 0;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+
+        img {
+            max-width: 150px;
+            height: 75px;
+            margin: 20px 0;
+        }
+        a {
+            display: inline-block;
+            @include click_animation_transition(0.2);
+
+            text: {
+                decoration: none;
+                align: center;
+            }
+            &:hover {
+                text-decoration: 2px underline;
+            }
+            &:active {
+                @include click_animation_scale(0.9);
+            }
+        }
+    }
+}
+
+// TODO: BLOG

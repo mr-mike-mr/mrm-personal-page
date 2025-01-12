@@ -1,3 +1,4 @@
+<!-- SCRIPT -->
 <script>
 	// import assets
 	import pfp_image from "$lib/assets/mike-pfp.jpg";

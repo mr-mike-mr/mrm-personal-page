@@ -1,3 +1,4 @@
+<!-- SCRIPT -->
 <script>
 	// import assets
 	import magnifying_glass_emoji from "$lib/assets/emojis/magnifying_glass_emoji.png";
