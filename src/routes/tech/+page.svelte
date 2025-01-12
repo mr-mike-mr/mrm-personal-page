@@ -9,7 +9,8 @@
 	import gpu_image from '$lib/assets/tech/gpu.png';
 	import ssd_image from '$lib/assets/tech/ssd.png';
 	import psu_image from '$lib/assets/tech/psu.png';
-	import monitor_image from '$lib/assets/tech/monitor.png';
+	import main_monitor_image from '$lib/assets/tech/main_monitor.jpg';
+	import second_monitor_image from '$lib/assets/tech/second_monitor.png';
 	import monitor_holder_image from '$lib/assets/tech/monitor_holder.png';
 	import led_light_strip_image from '$lib/assets/tech/led_light_strip.png';
 	import keyboard_image from '$lib/assets/tech/keyboard.png';
@@ -25,6 +26,8 @@
 	import rpi_hdd_image from '$lib/assets/tech/rpi_hdd.png';
 	import hdd_reduction_image from '$lib/assets/tech/hdd_reduction.png';
 </script>
+
+<!-- TODO: ADD OF DISTRIBUTOR LINKS -->
 
 <div class="tech_root">
     <div class="tech_pc">
@@ -45,7 +48,8 @@
     <div class="tech_accessory">
         <div class="text_from_lines">My accessory</div>
         <div>
-            <a target="_blank" href="https://www.refurbished.sk/lcd-dell-24-u2410f-blacksilver-149088"><img alt="Monitor" src={monitor_image} /> Monitor</a>
+            <a target="_blank" href="https://www.alza.sk/msi-pro-mp225-d12695067.htm"><img alt="Main monitor" src={main_monitor_image} /> Main Monitor</a>
+            <a target="_blank" href="https://www.refurbished.sk/lcd-dell-24-u2410f-blacksilver-149088"><img alt="Second monitor" src={second_monitor_image} /> Second Monitor</a>
             <a target="_blank" href="https://www.tonerpartner.sk/sos-1720-plyn-drziak-dual-stell-28903sk/"><img alt="Monitor holder" src={monitor_holder_image} /> Monitor holder</a>
             <a target="_blank" href="https://www.alza.sk/sonoff-l2-lite-smart-led-light-strip-1-5-m-d6796884.htm"><img alt="LED light strip" src={led_light_strip_image} /> LED light strip</a>
             <a target="_blank" href="https://www.alza.sk/logitech-g413-tkl-se-mechanical-gaming-keyboard-black-us-intl-d6944846.htm"><img alt="Keyboard" src={keyboard_image} /> Keyboard</a>

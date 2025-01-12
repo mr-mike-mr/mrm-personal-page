@@ -1,3 +1,21 @@
+* {
+    font: {
+        family: "JetBrains Mono", serif;
+        optical-sizing: auto;
+    }
+}
+.routes {
+    li {
+        a {
+            font: {
+                family: "Open Sans", sans-serif !important;
+                optical-sizing: auto;
+            }
+        }
+    }
+}
+
+
 h1 {
     font: {
         size: 24px;
