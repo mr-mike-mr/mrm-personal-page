@@ -2,7 +2,7 @@
 @import "colors";
 
 // template
-@mixin theme_template($color1, $color2, $bg_type) {
+@mixin theme_template($color1, $color2) {
     background-color: $color1;
     color: $color2;
 
@@ -115,10 +115,10 @@
 
 // dark
 html.dark {
-    @include theme_template($dark, $light, "../bg_dark.png");
+    @include theme_template($dark, $light);
 }
 
 // light
 html.light {
-    @include theme_template($light, $dark, "../bg_white.png");
+    @include theme_template($light, $dark);
 }
