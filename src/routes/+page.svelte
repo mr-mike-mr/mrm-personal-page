@@ -3,13 +3,17 @@
 	// import assets
 	import pfp_image from "$lib/assets/mike-pfp.jpg";
 	import waving_hand_emoji from "$lib/assets/emojis/waving_hand_emoji.png";
+	// import libs
+	import locales from "$lib/locales.json";
+	// import stores
+	import { lang } from "$lib/stores/user_store.js";
 </script>
 
 <!-- HOME ROOT -->
 <div class="home_root">
     <!-- svelte-ignore a11y_img_redundant_alt -->
     <!-- WELCOME -->
-    <h1>Welcome<img alt="Waving hand emoji" src={waving_hand_emoji} /></h1>
+    <h1>{locales[$lang]["10"]}<img alt="Waving hand emoji" src={waving_hand_emoji} /></h1>
 
     <!-- PFP TEXT -->
     <div class="pfp_text">
@@ -19,8 +23,8 @@
         <!-- TEXT -->
         <div>
             <h2>MR.MIKE$</h2>
-            <p>I am a developer of websites and web applications. He likes to try someing new from technology and the like. I try to write clean and elegant code that everyone can understand.</p>
-            <i>My goal is to make applications that will have real use.</i>
+            <p>{locales[$lang]["11"]}</p>
+            <i>{locales[$lang]["12"]}</i>
         </div>
     </div>
 
