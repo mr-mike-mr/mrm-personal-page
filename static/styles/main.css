@@ -40,6 +40,9 @@ html.dark .button:hover {
   color: #121212;
   background-color: #F5F5F5;
 }
+html.dark footer {
+  background-color: #121212;
+}
 html.dark .links div {
   background-color: #F5F5F5;
 }
@@ -63,6 +66,16 @@ html.dark .line_text {
 }
 html.dark .line_text::before, html.dark .line_text::after {
   background: #F5F5F5;
+}
+html.dark .project div {
+  background-color: #F5F5F5;
+}
+html.dark .project div h1 {
+  color: #121212;
+}
+html.dark .project a {
+  color: #121212;
+  background-color: #F5F5F5;
 }
 html.dark .tech_container div {
   background-color: #F5F5F5;
@@ -100,6 +113,9 @@ html.light .button:hover {
   color: #F5F5F5;
   background-color: #121212;
 }
+html.light footer {
+  background-color: #F5F5F5;
+}
 html.light .links div {
   background-color: #121212;
 }
@@ -123,6 +139,16 @@ html.light .line_text {
 }
 html.light .line_text::before, html.light .line_text::after {
   background: #121212;
+}
+html.light .project div {
+  background-color: #121212;
+}
+html.light .project div h1 {
+  color: #F5F5F5;
+}
+html.light .project a {
+  color: #F5F5F5;
+  background-color: #121212;
 }
 html.light .tech_container div {
   background-color: #121212;
@@ -202,6 +228,8 @@ header {
   justify-content: center;
   width: 100vw;
   background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 header nav {
   display: flex;
@@ -213,7 +241,7 @@ header nav {
   min-width: 300px;
   height: 25px;
   padding: 5px;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
   overflow: hidden;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -302,6 +330,12 @@ footer {
   bottom: 0;
   text-align: center;
   color: #A6A6A6;
+  padding: 2px 5px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
 }
 
 .home_root {
@@ -309,6 +343,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 15px;
 }
 .home_root h1 {
   font-size: 48px !important;
@@ -362,7 +397,7 @@ footer {
 }
 .home_root .links div {
   width: 150px;
-  margin: 5px 5px;
+  margin: 5px;
   padding: 5px 10px;
   text-align: center;
   border-radius: 50px;
@@ -404,8 +439,10 @@ footer {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 46%;
+  max-width: 850px;
   min-width: 300px;
+  width: 100%;
+  padding-bottom: 10px;
 }
 .skills_root div {
   display: flex;
@@ -447,9 +484,93 @@ footer {
   -o-transform: scale(0.9);
 }
 
-.tech_root {
-  width: 46%;
+.projects_root {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
   min-width: 300px;
+  width: 100%;
+  overflow: visible;
+}
+.projects_root .project {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 280px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.projects_root .project div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 280px;
+  padding: 5px 7px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.projects_root .project div img {
+  width: 280px;
+  max-height: 250px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+.projects_root .project div h1 {
+  text-align: center;
+}
+.projects_root .project a {
+  width: 280px;
+  height: 35px;
+  margin-top: 10px;
+  padding-top: 15px;
+  text-decoration: none;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
+  text-decoration: none;
+  text-align: center;
+}
+.projects_root .project a:hover {
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
+}
+.projects_root .project a:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+
+.tech_root {
+  max-width: 850px;
+  min-width: 300px;
+  width: 100%;
 }
 
 .line_text {
