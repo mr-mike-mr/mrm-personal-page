@@ -319,10 +319,11 @@ footer {
         div {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: space-between;
             flex-direction: column;
             flex-wrap: nowrap;
             width: 280px;
+            height: 250px;
             padding: 5px 7px;
             border-radius: 25px;
             -webkit-border-radius: 25px;
@@ -332,6 +333,7 @@ footer {
 
             img {
                 width: 280px;
+                height: 158px;
                 border-radius: 25px;
                 -webkit-border-radius: 25px;
                 -moz-border-radius: 25px;
@@ -368,7 +370,7 @@ footer {
                 @include click_animation_scale(0.9);
             }
         }
-}
+    }
 }
 
 // TECH
