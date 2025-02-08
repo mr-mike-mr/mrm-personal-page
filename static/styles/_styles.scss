@@ -46,6 +46,7 @@ header {
         padding: 5px;
         margin: 10px 0 0 0;
         overflow: hidden;
+        border: 1px solid;
         border-radius: 25px;
         -webkit-border-radius: 25px;
         -moz-border-radius: 25px;
@@ -143,7 +144,7 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 15px;
+    padding: 35px 0 15px 0;
 
     h1 {
         font-size: 48px !important;
@@ -249,7 +250,7 @@ footer {
     max-width: 850px;
     min-width: 300px;
     width: 100%;
-    padding-bottom: 10px;
+    padding: 45px 0 10px 0;
 
     div {
         display: flex;
@@ -298,6 +299,7 @@ footer {
     min-width: 300px;
     width: 100%;
     overflow: visible;
+    padding: 35px 0 0 0;
 
     .project {
         display: flex;
@@ -375,6 +377,7 @@ footer {
     max-width: 850px;
     min-width: 300px;
     width: 100%;
+    padding: 55px 0 0 0;
 }
 .line_text {
     display: flex;
