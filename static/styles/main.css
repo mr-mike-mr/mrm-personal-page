@@ -32,6 +32,7 @@ html.dark .cookies_allow_request div button {
 html.dark .cookies_allow_request div button:hover {
   color: #121212;
   background-color: #F5F5F5;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
 }
 html.dark .button {
   color: #F5F5F5;
@@ -40,12 +41,17 @@ html.dark .button {
 html.dark .button:hover {
   color: #121212;
   background-color: #F5F5F5;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
 }
 html.dark footer {
   background-color: #121212;
 }
+html.dark .pfp_text img {
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
+}
 html.dark .links div {
   background-color: #F5F5F5;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
 }
 html.dark .links div svg path {
   fill: #121212;
@@ -55,6 +61,7 @@ html.dark .links div a {
 }
 html.dark .skills_root div {
   background-color: #F5F5F5;
+  box-shadow: 2px 2px 10px #F5F5F5;
 }
 html.dark .skills_root div svg path {
   fill: #121212;
@@ -70,6 +77,7 @@ html.dark .line_text::before, html.dark .line_text::after {
 }
 html.dark .project div {
   background-color: #F5F5F5;
+  box-shadow: 1px 1px 5px #F5F5F5;
 }
 html.dark .project div h1 {
   color: #121212;
@@ -77,9 +85,11 @@ html.dark .project div h1 {
 html.dark .project a {
   color: #121212;
   background-color: #F5F5F5;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
 }
 html.dark .tech_container div {
   background-color: #F5F5F5;
+  box-shadow: 2px 2px 10px #F5F5F5;
 }
 html.dark .tech_container div a {
   color: #121212;
@@ -106,6 +116,7 @@ html.light .cookies_allow_request div button {
 html.light .cookies_allow_request div button:hover {
   color: #F5F5F5;
   background-color: #121212;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 html.light .button {
   color: #121212;
@@ -114,12 +125,17 @@ html.light .button {
 html.light .button:hover {
   color: #F5F5F5;
   background-color: #121212;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 html.light footer {
   background-color: #F5F5F5;
 }
+html.light .pfp_text img {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
 html.light .links div {
   background-color: #121212;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 html.light .links div svg path {
   fill: #F5F5F5;
@@ -129,6 +145,7 @@ html.light .links div a {
 }
 html.light .skills_root div {
   background-color: #121212;
+  box-shadow: 2px 2px 10px #121212;
 }
 html.light .skills_root div svg path {
   fill: #F5F5F5;
@@ -144,6 +161,7 @@ html.light .line_text::before, html.light .line_text::after {
 }
 html.light .project div {
   background-color: #121212;
+  box-shadow: 1px 1px 5px #121212;
 }
 html.light .project div h1 {
   color: #F5F5F5;
@@ -151,9 +169,11 @@ html.light .project div h1 {
 html.light .project a {
   color: #F5F5F5;
   background-color: #121212;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 html.light .tech_container div {
   background-color: #121212;
+  box-shadow: 2px 2px 10px #121212;
 }
 html.light .tech_container div a {
   color: #F5F5F5;
