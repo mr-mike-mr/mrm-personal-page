@@ -21,7 +21,6 @@ export async function load() {
         await connection.end();
 
         // return all data +page.svelte
-        console.log(results)
         return { projects: results };
     // catch error
     } catch (error) {
