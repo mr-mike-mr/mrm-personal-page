@@ -1,0 +1,110 @@
+// import
+@import "colors";
+@import "mixins";
+
+// theme template
+@mixin theme_template($color1, $color2, $shadow_color, $placeholder) {
+    // PROJECTS
+    .projects_root {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        min-width: 300px;
+        width: 100%;
+        overflow: visible;
+        gap: 25px;
+        padding: 55px 0 0 0;
+
+        .project {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 280px;
+            padding: 10px;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+
+            div {
+                background-color: $color2;
+                box-shadow: 1px 1px 5px $color2;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                width: 280px;
+                height: 225px;
+                padding: 5px 7px;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+
+                img {
+                    width: 280px;
+                    height: 158px;
+                    object-fit: cover;
+                    border-radius: 20px 20px 0 0;
+                    -webkit-border-radius: 20px 20px 0 0;
+                    -moz-border-radius: 20px 20px 0 0;
+                    -ms-border-radius: 20px 20px 0 0;
+                    -o-border-radius: 20px 20px 0 0;
+                }
+                h1 {
+                    color: $color1;
+                    margin: 5px 0;
+
+                    text: {
+                        align: center;
+                    }
+                }
+            }
+            a {
+                color: $color1;
+                background-color: $color2;
+                box-shadow: 0px 4px 10px $shadow_color;
+                width: 280px;
+                height: 35px;
+                margin-top: 10px;
+                padding-top: 15px;
+                text-decoration: none;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                @include click_animation_transition(0.2);
+
+                text: {
+                    decoration: none;
+                    align: center;
+                }
+                &:hover {
+                    text-decoration: 2px underline;
+                }
+                &:active {
+                    @include click_animation_scale(0.9);
+                }
+            }
+        }
+    }
+}
+
+// dark
+html.dark {
+    @include theme_template($dark, $light, $shadow_light, $placeholder_dark);
+}
+
+// light
+html.light {
+    @include theme_template($light, $dark, $shadow_dark, $placeholder_light);
+}

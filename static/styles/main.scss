@@ -1,16 +1,48 @@
-// body
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100%;
+// imports
+@import "colors";
+@import "fonts";
+
+// theme template
+@mixin theme_template($color1, $color2, $shadow_color, $placeholder) {
+    // html
+    background-color: $color1;
+    color: $color2;
+
+    // everything
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    // html and body
+    &, body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+    }
+
+    // body
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+// dark
+html.dark {
+    @include theme_template($dark, $light, $shadow_light, $placeholder_dark);
+}
+
+// light
+html.light {
+    @include theme_template($light, $dark, $shadow_dark, $placeholder_light);
 }
 
 // imports
-@import "themes";
-@import "styles";
+@import "home";
+@import "home_layout";
+@import "skills";
+@import "projects";
+@import "tech";
+@import "blog";

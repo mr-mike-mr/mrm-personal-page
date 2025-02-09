@@ -1,0 +1,19 @@
+// TODO: MAKE...
+// import
+@import "colors";
+@import "mixins";
+
+// theme template
+@mixin theme_template($color1, $color2, $shadow_color, $placeholder) {
+
+}
+
+// dark
+html.dark {
+    @include theme_template($dark, $light, $shadow_light, $placeholder_dark);
+}
+
+// light
+html.light {
+    @include theme_template($light, $dark, $shadow_dark, $placeholder_light);
+}
