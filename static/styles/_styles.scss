@@ -7,15 +7,14 @@
 .button {
     width: 200px;
     height: 35px;
-    margin: 10px;
     border: 2px solid;
     background-color: transparent;
-    @include click_animation_transition(0.2);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    @include click_animation_transition(0.2);
 }
 .button:active {
     @include click_animation_scale(0.9);
@@ -46,7 +45,7 @@ header {
         padding: 5px;
         margin: 10px 0 0 0;
         overflow: hidden;
-        border: 1px solid;
+        border: 2px solid;
         border-radius: 25px;
         -webkit-border-radius: 25px;
         -moz-border-radius: 25px;
@@ -93,21 +92,25 @@ header {
     margin: 0;
     padding: 0 5px 0 5px;
     list-style: none;
-    border-left: 0.5px solid;
+    border-left: 2px solid;
+    gap: 10px;
 
     li {
         button {
-            margin: 2px 0 0 0;
+            margin: 5px 0 0 0;
             border: none;
             background-color: transparent;
+            width: 20px;
+            height: 20px;
             @include click_animation_transition(0.2);
+            padding: 0;
 
             &:active {
                 @include click_animation_scale(0.9);
             }
             img {
-                width: 20px;
-                height: 20px;
+                width: auto;
+                height: 100%;
             }
         }
     }
@@ -119,9 +122,19 @@ header {
     justify-content: center;
     flex-direction: column;
     flex: 1;
-    width: 40%;
-    min-width: 320px;
+    max-width: 500px;
+    width: 90%;
+    min-width: 300px;
+    padding: 10px;
     text-align: center;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
 
 // FOOTER
@@ -144,7 +157,7 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 35px 0 15px 0;
+    padding: 35px 0 25px 0;
 
     h1 {
         font-size: 48px !important;
@@ -202,10 +215,10 @@ footer {
         flex-wrap: wrap;
         min-width: 300px;
         max-width: 800px;
+        gap: 10px;
 
         div {
             width: 150px;
-            margin: 5px;
             padding: 5px 10px;
             text-align: center;
             border-radius: 50px;
@@ -251,13 +264,13 @@ footer {
     min-width: 300px;
     width: 100%;
     padding: 45px 0 10px 0;
+    gap: 25px;
 
     div {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin: 10px;
         height: 150px;
         width: 100px;
         border-radius: 10px;
@@ -299,7 +312,8 @@ footer {
     min-width: 300px;
     width: 100%;
     overflow: visible;
-    padding: 35px 0 0 0;
+    gap: 25px;
+    padding: 55px 0 0 0;
 
     .project {
         display: flex;
@@ -309,7 +323,6 @@ footer {
         flex-wrap: nowrap;
         width: 280px;
         padding: 10px;
-        margin: 10px;
         border-radius: 25px;
         -webkit-border-radius: 25px;
         -moz-border-radius: 25px;
@@ -319,11 +332,11 @@ footer {
         div {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-direction: column;
             flex-wrap: nowrap;
             width: 280px;
-            height: 250px;
+            height: 225px;
             padding: 5px 7px;
             border-radius: 25px;
             -webkit-border-radius: 25px;
@@ -334,13 +347,16 @@ footer {
             img {
                 width: 280px;
                 height: 158px;
-                border-radius: 25px;
-                -webkit-border-radius: 25px;
-                -moz-border-radius: 25px;
-                -ms-border-radius: 25px;
-                -o-border-radius: 25px;
-            }
+                object-fit: cover;
+                border-radius: 20px 20px 0 0;
+                -webkit-border-radius: 20px 20px 0 0;
+                -moz-border-radius: 20px 20px 0 0;
+                -ms-border-radius: 20px 20px 0 0;
+                -o-border-radius: 20px 20px 0 0;
+}
             h1 {
+                margin: 5px 0;
+
                 text: {
                     align: center;
                 }
@@ -396,12 +412,13 @@ footer {
 }
 .tech_container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     margin: 0 0 50px 0;
+    gap: 25px;
 
     div {
         display: flex;
@@ -411,7 +428,6 @@ footer {
         flex-wrap: nowrap;
         width: 150px;
         height: 150px;
-        margin: 10px;
         padding: 10px;
         border-radius: 25px;
         -webkit-border-radius: 25px;
@@ -423,6 +439,7 @@ footer {
             max-width: 150px;
             height: 75px;
             margin: 20px 0;
+            object-fit: cover;
         }
         a {
             display: inline-block;

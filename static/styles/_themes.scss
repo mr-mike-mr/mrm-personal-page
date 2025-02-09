@@ -2,7 +2,7 @@
 @import "colors";
 
 // template
-@mixin theme_template($color1, $color2, $shadow_color) {
+@mixin theme_template($color1, $color2, $shadow_color, $placeholder) {
     background-color: $color1;
     color: $color2;
 
@@ -125,14 +125,28 @@
             }
         }
     }
+
+    .blog_root {
+        .blog_search {
+            background-color: $color2;
+
+            .blog_search_bar {
+                border-color: $color1;
+                color: $color1;
+            }
+            .blog_search_bar::placeholder {
+                color: $placeholder;
+            }
+        }
+    }
 }
 
 // dark
 html.dark {
-    @include theme_template($dark, $light, rgba(255, 255, 255, 0.250)); // TODO: change shadow color
+    @include theme_template($dark, $light, $shadow_light, $placeholder_dark);
 }
 
 // light
 html.light {
-    @include theme_template($light, $dark, rgba(0, 0, 0, 0.250));
+    @include theme_template($light, $dark, $shadow_dark, $placeholder_light);
 }

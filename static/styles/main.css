@@ -94,6 +94,19 @@ html.dark .tech_container div {
 html.dark .tech_container div a {
   color: #121212;
 }
+html.dark .blog_root .blog_search {
+  background-color: #F5F5F5;
+}
+html.dark .blog_root .blog_search .blog_search_bar {
+  border-color: #121212;
+  color: #121212;
+}
+html.dark .blog_root .blog_search .blog_search_bar::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+html.dark .blog_root .blog_search .blog_search_bar::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
 
 html.light {
   background-color: #F5F5F5;
@@ -178,6 +191,19 @@ html.light .tech_container div {
 html.light .tech_container div a {
   color: #F5F5F5;
 }
+html.light .blog_root .blog_search {
+  background-color: #121212;
+}
+html.light .blog_root .blog_search .blog_search_bar {
+  border-color: #F5F5F5;
+  color: #F5F5F5;
+}
+html.light .blog_root .blog_search .blog_search_bar::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+html.light .blog_root .blog_search .blog_search_bar::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
 
 * {
   font-family: "JetBrains Mono", serif;
@@ -189,7 +215,7 @@ html.light .tech_container div a {
   font-optical-sizing: auto;
 }
 
-h1, .line_text {
+h1, .line_text, .blog_post_heading {
   font-size: 24px;
   font-weight: 800;
 }
@@ -222,19 +248,18 @@ footer {
 .button {
   width: 200px;
   height: 35px;
-  margin: 10px;
   border: 2px solid;
   background-color: transparent;
-  transition: transform 0.2 ease;
-  -webkit-transition: transform 0.2 ease;
-  -moz-transition: transform 0.2 ease;
-  -ms-transition: transform 0.2 ease;
-  -o-transition: transform 0.2 ease;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
 }
 
 .button:active {
@@ -269,7 +294,7 @@ header nav {
   padding: 5px;
   margin: 10px 0 0 0;
   overflow: hidden;
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -318,17 +343,21 @@ header nav {
   margin: 0;
   padding: 0 5px 0 5px;
   list-style: none;
-  border-left: 0.5px solid;
+  border-left: 2px solid;
+  gap: 10px;
 }
 .page_settings li button {
-  margin: 2px 0 0 0;
+  margin: 5px 0 0 0;
   border: none;
   background-color: transparent;
+  width: 20px;
+  height: 20px;
   transition: transform 0.2 ease;
   -webkit-transition: transform 0.2 ease;
   -moz-transition: transform 0.2 ease;
   -ms-transition: transform 0.2 ease;
   -o-transition: transform 0.2 ease;
+  padding: 0;
 }
 .page_settings li button:active {
   transform: scale(0.9);
@@ -338,8 +367,8 @@ header nav {
   -o-transform: scale(0.9);
 }
 .page_settings li button img {
-  width: 20px;
-  height: 20px;
+  width: auto;
+  height: 100%;
 }
 
 .cookies_allow_request {
@@ -347,9 +376,18 @@ header nav {
   justify-content: center;
   flex-direction: column;
   flex: 1;
-  width: 40%;
-  min-width: 320px;
+  max-width: 500px;
+  width: 90%;
+  min-width: 300px;
+  padding: 10px;
   text-align: center;
+}
+.cookies_allow_request div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 footer {
@@ -370,7 +408,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 35px 0 15px 0;
+  padding: 35px 0 25px 0;
 }
 .home_root h1 {
   font-size: 48px !important;
@@ -421,10 +459,10 @@ footer {
   flex-wrap: wrap;
   min-width: 300px;
   max-width: 800px;
+  gap: 10px;
 }
 .home_root .links div {
   width: 150px;
-  margin: 5px;
   padding: 5px 10px;
   text-align: center;
   border-radius: 50px;
@@ -470,13 +508,13 @@ footer {
   min-width: 300px;
   width: 100%;
   padding: 45px 0 10px 0;
+  gap: 25px;
 }
 .skills_root div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 10px;
   height: 150px;
   width: 100px;
   border-radius: 10px;
@@ -521,7 +559,8 @@ footer {
   min-width: 300px;
   width: 100%;
   overflow: visible;
-  padding: 35px 0 0 0;
+  gap: 25px;
+  padding: 55px 0 0 0;
 }
 .projects_root .project {
   display: flex;
@@ -531,7 +570,6 @@ footer {
   flex-wrap: nowrap;
   width: 280px;
   padding: 10px;
-  margin: 10px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -541,11 +579,11 @@ footer {
 .projects_root .project div {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: nowrap;
   width: 280px;
-  height: 250px;
+  height: 225px;
   padding: 5px 7px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -556,13 +594,16 @@ footer {
 .projects_root .project div img {
   width: 280px;
   height: 158px;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  -webkit-border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  -ms-border-radius: 20px 20px 0 0;
+  -o-border-radius: 20px 20px 0 0;
 }
 .projects_root .project div h1 {
+  margin: 5px 0;
   text-align: center;
 }
 .projects_root .project a {
@@ -621,12 +662,13 @@ footer {
 
 .tech_container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   margin: 0 0 50px 0;
+  gap: 25px;
 }
 .tech_container div {
   display: flex;
@@ -636,7 +678,6 @@ footer {
   flex-wrap: nowrap;
   width: 150px;
   height: 150px;
-  margin: 10px;
   padding: 10px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -648,6 +689,8 @@ footer {
   max-width: 150px;
   height: 75px;
   margin: 20px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .tech_container div a {
   display: inline-block;

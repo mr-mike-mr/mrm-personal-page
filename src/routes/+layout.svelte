@@ -1,7 +1,5 @@
 <!-- SCRIPT -->
 <script>
-	// get layout children
-	let { children } = $props();
 	// import libs
 	import Cookies from "js-cookie";
 	import locales from "$lib/locales.json";
@@ -20,6 +18,8 @@
 	import flag_sk_emoji from "$lib/assets/emojis/flag_sk_emoji.png";
 	import moon_emoji from "$lib/assets/emojis/moon_emoji.png";
 	import sun_emoji from "$lib/assets/emojis/sun_emoji.png";
+	// get layout children
+	let { children } = $props();
 
 	// vars
 	let cookies_allowed = $state(false);
