@@ -16,7 +16,7 @@
         width: 100%;
         overflow: visible;
         gap: 25px;
-        padding: 55px 0 0 0;
+        padding: 55px 0 20px 0;
 
         .project {
             display: flex;
@@ -72,10 +72,12 @@
                 color: $color1;
                 background-color: $color2;
                 box-shadow: 0px 4px 10px $shadow_color;
-                width: 280px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 200px;
                 height: 35px;
-                margin-top: 10px;
-                padding-top: 15px;
+                margin-top: 15px;
                 text-decoration: none;
                 border-radius: 25px;
                 -webkit-border-radius: 25px;

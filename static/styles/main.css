@@ -50,6 +50,7 @@ html.dark, html.dark body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  min-height: 100vh;
 }
 html.dark body {
   display: flex;
@@ -69,6 +70,7 @@ html.light, html.light body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  min-height: 100vh;
 }
 html.light body {
   display: flex;
@@ -76,16 +78,353 @@ html.light body {
   align-items: center;
 }
 
+html.dark header {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+html.dark header nav {
+  background-color: #F5F5F5;
+  border: 2px #121212 solid;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  max-width: 900px;
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  padding: 5px 0;
+  overflow: hidden;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+html.dark header nav .routes {
+  display: flex;
+  list-style: none;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+html.dark header nav .routes li a {
+  color: #121212;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
+}
+html.dark header nav .routes li a:hover {
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+}
+html.dark header nav .routes li a:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+html.dark header nav .routes li a img {
+  width: 15px;
+  height: 15px;
+  margin: 2px 3px 0 0;
+}
+html.dark header nav .page_settings {
+  border-left: 2px #121212 solid;
+  height: 25px;
+  display: flex;
+  margin: 0;
+  padding: 0 5px 0 5px;
+  list-style: none;
+  gap: 10px;
+}
+html.dark header nav .page_settings li button {
+  margin-top: 2px;
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
+  padding: 0;
+}
+html.dark header nav .page_settings li button:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+html.dark header nav .page_settings li button img {
+  width: auto;
+  height: 100%;
+}
+html.dark .cookies_allow_request {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  width: 500px;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  gap: 10px;
+}
+html.dark .cookies_allow_request div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+html.dark .cookies_allow_request div button {
+  color: #F5F5F5;
+  border-color: #F5F5F5;
+  width: 200px;
+  height: 35px;
+  border: 2px solid;
+  background-color: transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
+}
+html.dark .cookies_allow_request div button:hover {
+  color: #121212;
+  background-color: #F5F5F5;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
+}
+html.dark .cookies_allow_request div button:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+html.dark footer {
+  background-color: #121212;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  color: #A6A6A6;
+  padding: 2px 5px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+@media (max-width: 510px) {
+  html.dark .cookies_allow_request {
+    width: 300px !important;
+  }
+}
+
+html.light header {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+html.light header nav {
+  background-color: #121212;
+  border: 2px #F5F5F5 solid;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  max-width: 900px;
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+  padding: 5px 0;
+  overflow: hidden;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+html.light header nav .routes {
+  display: flex;
+  list-style: none;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+html.light header nav .routes li a {
+  color: #F5F5F5;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
+}
+html.light header nav .routes li a:hover {
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
+}
+html.light header nav .routes li a:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+html.light header nav .routes li a img {
+  width: 15px;
+  height: 15px;
+  margin: 2px 3px 0 0;
+}
+html.light header nav .page_settings {
+  border-left: 2px #F5F5F5 solid;
+  height: 25px;
+  display: flex;
+  margin: 0;
+  padding: 0 5px 0 5px;
+  list-style: none;
+  gap: 10px;
+}
+html.light header nav .page_settings li button {
+  margin-top: 2px;
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
+  padding: 0;
+}
+html.light header nav .page_settings li button:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+html.light header nav .page_settings li button img {
+  width: auto;
+  height: 100%;
+}
+html.light .cookies_allow_request {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  width: 500px;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  gap: 10px;
+}
+html.light .cookies_allow_request div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+html.light .cookies_allow_request div button {
+  color: #121212;
+  border-color: #121212;
+  width: 200px;
+  height: 35px;
+  border: 2px solid;
+  background-color: transparent;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
+}
+html.light .cookies_allow_request div button:hover {
+  color: #F5F5F5;
+  background-color: #121212;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+html.light .cookies_allow_request div button:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+html.light footer {
+  background-color: #F5F5F5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  color: #A6A6A6;
+  padding: 2px 5px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+@media (max-width: 510px) {
+  html.light .cookies_allow_request {
+    width: 300px !important;
+  }
+}
+
 html.dark .home_root {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 35px 0 25px 0;
+  padding: 50px 0 35px 0;
+  gap: 20px;
 }
 html.dark .home_root h1 {
   font-size: 48px !important;
-  margin: 20px 0px;
+  padding-top: 20px;
 }
 html.dark .home_root h1 img {
   width: 50px;
@@ -93,7 +432,6 @@ html.dark .home_root h1 img {
   margin: 0 15px;
 }
 html.dark .home_root .pfp_text {
-  margin: 50px 0px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -102,6 +440,7 @@ html.dark .home_root .pfp_text {
   flex-wrap: wrap;
   width: 100%;
   min-width: 300px;
+  gap: 10px;
 }
 html.dark .home_root .pfp_text img {
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
@@ -116,7 +455,6 @@ html.dark .home_root .pfp_text img {
 }
 html.dark .home_root .pfp_text div {
   width: 300px;
-  margin: 10px;
 }
 html.dark .home_root .pfp_text div h2 {
   text-align: center;
@@ -133,6 +471,8 @@ html.dark .home_root .links {
   flex-wrap: wrap;
   min-width: 300px;
   max-width: 800px;
+  box-sizing: border-box;
+  padding: 0 10px;
   gap: 10px;
 }
 html.dark .home_root .links div {
@@ -178,17 +518,26 @@ html.dark .home_root .links div a:active {
   -ms-transform: scale(0.9);
   -o-transform: scale(0.9);
 }
+@media (max-width: 618px) {
+  html.dark .pfp_text div {
+    padding: 0 10px;
+    box-sizing: border-box;
+    max-width: 500px !important;
+    width: 100% !important;
+  }
+}
 
 html.light .home_root {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 35px 0 25px 0;
+  padding: 50px 0 35px 0;
+  gap: 20px;
 }
 html.light .home_root h1 {
   font-size: 48px !important;
-  margin: 20px 0px;
+  padding-top: 20px;
 }
 html.light .home_root h1 img {
   width: 50px;
@@ -196,7 +545,6 @@ html.light .home_root h1 img {
   margin: 0 15px;
 }
 html.light .home_root .pfp_text {
-  margin: 50px 0px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -205,6 +553,7 @@ html.light .home_root .pfp_text {
   flex-wrap: wrap;
   width: 100%;
   min-width: 300px;
+  gap: 10px;
 }
 html.light .home_root .pfp_text img {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -219,7 +568,6 @@ html.light .home_root .pfp_text img {
 }
 html.light .home_root .pfp_text div {
   width: 300px;
-  margin: 10px;
 }
 html.light .home_root .pfp_text div h2 {
   text-align: center;
@@ -236,6 +584,8 @@ html.light .home_root .links {
   flex-wrap: wrap;
   min-width: 300px;
   max-width: 800px;
+  box-sizing: border-box;
+  padding: 0 10px;
   gap: 10px;
 }
 html.light .home_root .links div {
@@ -281,333 +631,13 @@ html.light .home_root .links div a:active {
   -ms-transform: scale(0.9);
   -o-transform: scale(0.9);
 }
-
-html.dark header {
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-}
-html.dark header nav {
-  background-color: #F5F5F5;
-  border-color: #121212;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  width: 51%;
-  min-width: 300px;
-  height: 25px;
-  padding: 5px;
-  margin: 10px 0 0 0;
-  overflow: hidden;
-  border: 2px solid;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-html.dark .routes {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-html.dark .routes li a {
-  color: #121212;
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0 15px;
-  text-decoration: none;
-  transition: transform 0.2 ease;
-  -webkit-transition: transform 0.2 ease;
-  -moz-transition: transform 0.2 ease;
-  -ms-transition: transform 0.2 ease;
-  -o-transition: transform 0.2 ease;
-}
-html.dark .routes li a:hover {
-  -webkit-text-decoration: underline 2px;
-          text-decoration: underline 2px;
-}
-html.dark .routes li a:active {
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-}
-html.dark .routes li a img {
-  width: 15px;
-  height: 15px;
-  margin: 2px 3px 0 0;
-}
-html.dark .page_settings {
-  border-color: #121212;
-  display: flex;
-  margin: 0;
-  padding: 0 5px 0 5px;
-  list-style: none;
-  border-left: 2px solid;
-  gap: 10px;
-}
-html.dark .page_settings li button {
-  margin: 5px 0 0 0;
-  border: none;
-  background-color: transparent;
-  width: 20px;
-  height: 20px;
-  transition: transform 0.2 ease;
-  -webkit-transition: transform 0.2 ease;
-  -moz-transition: transform 0.2 ease;
-  -ms-transition: transform 0.2 ease;
-  -o-transition: transform 0.2 ease;
-  padding: 0;
-}
-html.dark .page_settings li button:active {
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-}
-html.dark .page_settings li button img {
-  width: auto;
-  height: 100%;
-}
-html.dark .cookies_allow_request {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex: 1;
-  max-width: 500px;
-  width: 90%;
-  min-width: 300px;
-  padding: 10px;
-  text-align: center;
-}
-html.dark .cookies_allow_request div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-html.dark .cookies_allow_request div button {
-  color: #F5F5F5;
-  border-color: #F5F5F5;
-  width: 200px;
-  height: 35px;
-  border: 2px solid;
-  background-color: transparent;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  transition: transform 0.2 ease;
-  -webkit-transition: transform 0.2 ease;
-  -moz-transition: transform 0.2 ease;
-  -ms-transition: transform 0.2 ease;
-  -o-transition: transform 0.2 ease;
-}
-html.dark .cookies_allow_request div button:hover {
-  color: #121212;
-  background-color: #F5F5F5;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
-}
-html.dark .cookies_allow_request div button:active {
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-}
-html.dark footer {
-  background-color: #121212;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  color: #A6A6A6;
-  padding: 2px 5px;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-
-html.light header {
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-}
-html.light header nav {
-  background-color: #121212;
-  border-color: #F5F5F5;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  width: 51%;
-  min-width: 300px;
-  height: 25px;
-  padding: 5px;
-  margin: 10px 0 0 0;
-  overflow: hidden;
-  border: 2px solid;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-html.light .routes {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-html.light .routes li a {
-  color: #F5F5F5;
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 0 15px;
-  text-decoration: none;
-  transition: transform 0.2 ease;
-  -webkit-transition: transform 0.2 ease;
-  -moz-transition: transform 0.2 ease;
-  -ms-transition: transform 0.2 ease;
-  -o-transition: transform 0.2 ease;
-}
-html.light .routes li a:hover {
-  -webkit-text-decoration: underline 2px;
-          text-decoration: underline 2px;
-}
-html.light .routes li a:active {
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-}
-html.light .routes li a img {
-  width: 15px;
-  height: 15px;
-  margin: 2px 3px 0 0;
-}
-html.light .page_settings {
-  border-color: #F5F5F5;
-  display: flex;
-  margin: 0;
-  padding: 0 5px 0 5px;
-  list-style: none;
-  border-left: 2px solid;
-  gap: 10px;
-}
-html.light .page_settings li button {
-  margin: 5px 0 0 0;
-  border: none;
-  background-color: transparent;
-  width: 20px;
-  height: 20px;
-  transition: transform 0.2 ease;
-  -webkit-transition: transform 0.2 ease;
-  -moz-transition: transform 0.2 ease;
-  -ms-transition: transform 0.2 ease;
-  -o-transition: transform 0.2 ease;
-  padding: 0;
-}
-html.light .page_settings li button:active {
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-}
-html.light .page_settings li button img {
-  width: auto;
-  height: 100%;
-}
-html.light .cookies_allow_request {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex: 1;
-  max-width: 500px;
-  width: 90%;
-  min-width: 300px;
-  padding: 10px;
-  text-align: center;
-}
-html.light .cookies_allow_request div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-html.light .cookies_allow_request div button {
-  color: #121212;
-  border-color: #121212;
-  width: 200px;
-  height: 35px;
-  border: 2px solid;
-  background-color: transparent;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  transition: transform 0.2 ease;
-  -webkit-transition: transform 0.2 ease;
-  -moz-transition: transform 0.2 ease;
-  -ms-transition: transform 0.2 ease;
-  -o-transition: transform 0.2 ease;
-}
-html.light .cookies_allow_request div button:hover {
-  color: #F5F5F5;
-  background-color: #121212;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-html.light .cookies_allow_request div button:active {
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-}
-html.light footer {
-  background-color: #F5F5F5;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  color: #A6A6A6;
-  padding: 2px 5px;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
+@media (max-width: 618px) {
+  html.light .pfp_text div {
+    padding: 0 10px;
+    box-sizing: border-box;
+    max-width: 500px !important;
+    width: 100% !important;
+  }
 }
 
 html.dark .skills_root {
@@ -618,8 +648,9 @@ html.dark .skills_root {
   max-width: 850px;
   min-width: 300px;
   width: 100%;
-  padding: 55px 0 10px 0;
+  padding: 65px 5px 30px 5px;
   gap: 25px;
+  box-sizing: border-box;
 }
 html.dark .skills_root div {
   background-color: #F5F5F5;
@@ -674,8 +705,9 @@ html.light .skills_root {
   max-width: 850px;
   min-width: 300px;
   width: 100%;
-  padding: 55px 0 10px 0;
+  padding: 65px 5px 30px 5px;
   gap: 25px;
+  box-sizing: border-box;
 }
 html.light .skills_root div {
   background-color: #121212;
@@ -733,7 +765,7 @@ html.dark .projects_root {
   width: 100%;
   overflow: visible;
   gap: 25px;
-  padding: 55px 0 0 0;
+  padding: 55px 0 20px 0;
 }
 html.dark .projects_root .project {
   display: flex;
@@ -786,10 +818,12 @@ html.dark .projects_root .project a {
   color: #121212;
   background-color: #F5F5F5;
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
-  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
   height: 35px;
-  margin-top: 10px;
-  padding-top: 15px;
+  margin-top: 15px;
   text-decoration: none;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -827,7 +861,7 @@ html.light .projects_root {
   width: 100%;
   overflow: visible;
   gap: 25px;
-  padding: 55px 0 0 0;
+  padding: 55px 0 20px 0;
 }
 html.light .projects_root .project {
   display: flex;
@@ -880,10 +914,12 @@ html.light .projects_root .project a {
   color: #F5F5F5;
   background-color: #121212;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
   height: 35px;
-  margin-top: 10px;
-  padding-top: 15px;
+  margin-top: 15px;
   text-decoration: none;
   border-radius: 25px;
   -webkit-border-radius: 25px;

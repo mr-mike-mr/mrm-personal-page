@@ -4,16 +4,18 @@
 
 // theme template
 @mixin theme_template($color1, $color2, $shadow_color, $placeholder) {
+    // home
     .home_root {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 35px 0 25px 0;
+        padding: 50px 0 35px 0;
+        gap: 20px;
 
         h1 {
             font-size: 48px !important;
-            margin: 20px 0px;
+            padding-top: 20px;
 
             img {
                 width: 50px;
@@ -22,7 +24,6 @@
             }
         }
         .pfp_text {
-            margin: 50px 0px;
             display: flex;
             align-items: center;
             align-content: center;
@@ -31,6 +32,7 @@
             flex-wrap: wrap;
             width: 100%;
             min-width: 300px;
+            gap: 10px;
 
             img {
                 box-shadow: 0px 4px 10px $shadow_color;
@@ -45,7 +47,6 @@
             }
             div {
                 width: 300px;
-                margin: 10px;
 
                 h2 {
                     text-align: center;
@@ -67,6 +68,8 @@
             flex-wrap: wrap;
             min-width: 300px;
             max-width: 800px;
+            box-sizing: border-box;
+            padding: 0 10px;
             gap: 10px;
 
             div {
@@ -109,6 +112,18 @@
                         @include click_animation_scale(0.9);
                     }
                 }
+            }
+        }
+    }
+
+    // max 618px media
+    @media (max-width: 618px) {
+        .pfp_text {
+            div {
+                padding: 0 10px;
+                box-sizing: border-box;
+                max-width: 500px !important;
+                width: 100% !important;
             }
         }
     }

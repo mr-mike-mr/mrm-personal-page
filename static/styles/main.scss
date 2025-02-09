@@ -19,6 +19,7 @@
         margin: 0;
         padding: 0;
         width: 100vw;
+        min-height: 100vh;
     }
 
     // body
@@ -40,8 +41,8 @@ html.light {
 }
 
 // imports
-@import "home";
 @import "home_layout";
+@import "home";
 @import "skills";
 @import "projects";
 @import "tech";
