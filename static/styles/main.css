@@ -790,7 +790,7 @@ html.dark .projects_root .project div {
   flex-direction: column;
   flex-wrap: nowrap;
   width: 280px;
-  height: 225px;
+  height: 300px;
   padding: 5px 7px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -813,6 +813,10 @@ html.dark .projects_root .project div h1 {
   color: #121212;
   margin: 5px 0;
   text-align: center;
+}
+html.dark .projects_root .project div p {
+  color: #121212;
+  text-align: left;
 }
 html.dark .projects_root .project a {
   color: #121212;
@@ -886,7 +890,7 @@ html.light .projects_root .project div {
   flex-direction: column;
   flex-wrap: nowrap;
   width: 280px;
-  height: 225px;
+  height: 300px;
   padding: 5px 7px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -909,6 +913,10 @@ html.light .projects_root .project div h1 {
   color: #F5F5F5;
   margin: 5px 0;
   text-align: center;
+}
+html.light .projects_root .project div p {
+  color: #F5F5F5;
+  text-align: left;
 }
 html.light .projects_root .project a {
   color: #F5F5F5;

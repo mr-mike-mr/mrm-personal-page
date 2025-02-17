@@ -19,6 +19,13 @@
                 <img alt="Project screenshot" src={"/projects/"+project.image} />
                 <!-- HEADING -->
                 <h1>{project.heading}</h1>
+                <!-- DESCRIPTION -->
+                {#if $lang === "en"} <!-- if english lang selected -->
+                    <p>{project.description_en}</p>
+                {:else if $lang === "sk"} <!-- if slovak lang selected -->
+                    <p>{project.description_sk}</p>
+                {/if}
+
             </div>
             <!-- LINK -->
             <a target="_blank" href={project.links}>{locales[$lang]["13"]}</a>

@@ -16,7 +16,7 @@ export async function load() {
         });
 
         // execut sql query to get data
-        const [results, fields] = await connection.query("SELECT * FROM projects");
+        const [results, fields] = await connection.query("SELECT * FROM projects ORDER BY id DESC");
 
         await connection.end();
 
