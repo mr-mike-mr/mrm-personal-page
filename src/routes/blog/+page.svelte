@@ -45,20 +45,6 @@
             <p>This is details for my post...</p>
         </div>
     </div>
-    <div class="post">
-        <img alt="Blog banner example" src="/blog_posts/blog_banner_example.png" />
-        <div>
-            <a class="blog_post_heading" target="_blank" href="https://example.com">This is my post</a>
-            <p>This is details for my post...</p>
-        </div>
-    </div>
-    <div class="post">
-        <img alt="Blog banner example" src="/blog_posts/blog_banner_example.png" />
-        <div>
-            <a class="blog_post_heading" target="_blank" href="https://example.com">This is my post</a>
-            <p>This is details for my post...</p>
-        </div>
-    </div>
 
     <button on:click={load_more}><img alt="Recycling symbol emoji" src={recycling_symbol_emoji_emoji} /></button>
 </div>
