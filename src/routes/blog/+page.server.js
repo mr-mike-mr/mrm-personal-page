@@ -15,19 +15,22 @@ export async function load() {
             database: "mrm_personal_page",
         });
 
+        // last selected id
+        let last_selected_id = 0;
+
         // execut sql query to get data
-        const [results, fields] = await connection.query("SELECT * FROM projects ORDER BY id DESC");
+        const [results, fields] = await connection.query(`SELECT id, thumbnail, title_en, title_sk, link, description_en, description_sk FROM blog WHERE id > ${last_selected_id} ORDER BY id LIMIT 5`); // TODO: add search bar filter
 
         // close connection
         await connection.end();
 
         // return all data +page.svelte
-        return { projects: results };
+        return { blog_posts: results.reverse() };
     // catch error
     } catch (error) {
         // print error into console
         console.error("DB error:", error);
         // return null array
-        return { projects: [] };
+        return { blog_posts: [] };
     }
 }

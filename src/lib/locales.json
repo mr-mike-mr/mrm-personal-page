@@ -39,12 +39,15 @@
         "37": "Every day carry",
         "38": "Phone",
         "39": "Earphone",
-
         "40": "Home server",
         "41": "Raspberry Pi",
         "42": "Cooler",
         "43": "HDD",
-        "44": "HDD reduction"
+        "44": "HDD reduction",
+        "45": "Search...",
+        "46": "More",
+        "47": "No projects!",
+        "48": "No posts!"
     },
     "sk": {
         "1": "Domov",
@@ -86,11 +89,14 @@
         "37": "Každodenné nosenie",
         "38": "Telefón",
         "39": "Slúchadlá do uší",
-
         "40": "Domáci server",
         "41": "Raspberry Pi",
         "42": "Chladič",
         "43": "HDD disk",
-        "44": "Redukcia disku"
+        "44": "Redukcia disku",
+        "45": "Hľadať...",
+        "46": "Viac",
+        "47": "Žiadne projekty!",
+        "48": "Žiadne príspevky!"
     }
 }

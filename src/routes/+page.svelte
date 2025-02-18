@@ -11,15 +11,13 @@
 
 <!-- HOME ROOT -->
 <div class="home_root">
-    <!-- svelte-ignore a11y_img_redundant_alt -->
     <!-- WELCOME -->
     <h1>{locales[$lang]["10"]}<img alt="Waving hand emoji" src={waving_hand_emoji} /></h1>
 
     <!-- PFP TEXT -->
     <div class="pfp_text">
         <!-- PFP -->
-        <!-- svelte-ignore a11y_img_redundant_alt -->
-        <img alt="Profile picture" src={pfp_image} />
+        <img alt="Profile" src={pfp_image} />
         <!-- TEXT -->
         <div>
             <h2>MR.MIKE$</h2>

@@ -32,8 +32,6 @@
 	import locales from "$lib/locales.json";
 	// import stores
 	import { lang } from "$lib/stores/user_store.js";
-
-    // TODO: {locales[$lang]["13"]}
 </script>
 
 <!-- TECH ROOT -->

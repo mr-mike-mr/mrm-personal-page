@@ -18,14 +18,11 @@ CREATE TABLE `blog` (
   `thumbnail` varchar(255) NOT NULL,
   `title_en` varchar(255) NOT NULL,
   `title_sk` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
   `description_en` varchar(255) NOT NULL,
   `description_sk` varchar(255) NOT NULL,
-  `head_en` varchar(255) NOT NULL,
-  `head_sk` varchar(255) NOT NULL,
   `body_en` varchar(255) NOT NULL,
   `body_sk` varchar(255) NOT NULL,
-  `foot_en` varchar(255) NOT NULL,
-  `foot_sk` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
