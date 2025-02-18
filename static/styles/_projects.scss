@@ -11,11 +11,11 @@
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 1000px;
-        min-width: 300px;
+        box-sizing: border-box;
+        max-width: 1500px;
         width: 100%;
         overflow: visible;
-        gap: 25px;
+        gap: 45px;
         padding: 55px 0 20px 0;
 
         .project {
@@ -24,7 +24,8 @@
             justify-content: space-around;
             flex-direction: column;
             flex-wrap: nowrap;
-            width: 280px;
+            box-sizing: border-box;
+            width: 380px;
             padding: 10px;
             border-radius: 25px;
             -webkit-border-radius: 25px;
@@ -40,8 +41,8 @@
                 justify-content: flex-start;
                 flex-direction: column;
                 flex-wrap: nowrap;
-                width: 280px;
-                height: 300px;
+                width: 380px;
+                height: 400px;
                 padding: 5px 7px;
                 border-radius: 25px;
                 -webkit-border-radius: 25px;
@@ -50,8 +51,9 @@
                 -o-border-radius: 25px;
 
                 img {
-                    width: 280px;
-                    height: 158px;
+                    width: 100% !important;
+                    height: auto !important;
+                    image-resolution: 16/9 !important;
                     object-fit: cover;
                     border-radius: 20px 20px 0 0;
                     -webkit-border-radius: 20px 20px 0 0;
@@ -69,6 +71,7 @@
                 }
                 p {
                     color: $color1;
+                    padding: 10px 0;
 
                     text: {
                         align: left;
@@ -103,6 +106,27 @@
                 &:active {
                     @include click_animation_scale(0.9);
                 }
+            }
+        }
+    }
+
+    // max 820px media
+    @media (max-width: 820px) {
+        .projects_root {
+            flex-direction: column !important;
+            align-items: center !important;
+            align-content: center !important;
+            justify-content: center !important;
+        }
+
+        .project {
+            max-width: 510px !important;
+            width: 100% !important;
+
+            div {
+                max-width: 510px !important;
+                width: 100% !important;
+                height: auto !important;
             }
         }
     }

@@ -10,12 +10,12 @@
         display: flex;
         justify-content: center;
         position: fixed;
+        box-sizing: border-box;
         top: 0;
         left: 0;
         z-index: 1000;
         width: 100vw;
         padding: 0 10px;
-        box-sizing: border-box;
 
         nav {
             background-color: $color2;
@@ -121,7 +121,6 @@
             button {
                 color: $color2;
                 border-color: $color2;
-
                 width: 200px;
                 height: 35px;
                 border: 2px solid;

@@ -46,5 +46,5 @@
         </div>
     </div>
 
-    <button on:click={load_more}><img alt="Recycling symbol emoji" src={recycling_symbol_emoji_emoji} /></button>
+    <button on:click={load_more}><img alt="Recycling symbol emoji" src={recycling_symbol_emoji_emoji} /> Load more</button>
 </div>
