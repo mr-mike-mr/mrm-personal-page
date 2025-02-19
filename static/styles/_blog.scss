@@ -4,7 +4,7 @@
 @import "mixins";
 
 // theme template
-@mixin theme_template($color1, $color2, $shadow_color, $placeholder) {
+@mixin theme_template($color1, $color2, $shadow_color, $placeholder, $post_tags) {
     .blog_root {
         display: flex;
         flex-direction: column;
@@ -73,51 +73,52 @@
                 }
             }
         }
-        .post {
-            background-color: $color2;
-            box-shadow: 0px 4px 10px $shadow_color;
-            display: flex;
-            flex-direction: row;
-            align-content: flex-start;
-            justify-content: flex-start;
-            flex-wrap: nowrap;
-            box-sizing: border-box;
-            width: 800px;
-            padding: 5px;
-            gap: 10px;
-            border-radius: 25px;
-            -webkit-border-radius: 25px;
-            -moz-border-radius: 25px;
-            -ms-border-radius: 25px;
-            -o-border-radius: 25px;
+        .posts {
+            max-width: 600px;
+            width: 100%;
 
-            img {
-                width: 100% !important;
-                height: auto !important;
-                image-resolution: 16/9 !important;
-                object-fit: cover;
-                border-radius: 25px;
-                -webkit-border-radius: 25px;
-                -moz-border-radius: 25px;
-                -ms-border-radius: 25px;
-                -o-border-radius: 25px;
-            }
-            div {
-                width: 100%;
-                text-align: center;
+            li {
+                padding: 10px;
+                margin-bottom: 15px;
 
                 a {
-                    color: $color1;
-                    text-decoration: none;
+                    color: $color2;
 
+                    font: {
+                        size: 35px;
+                        weight: 800;
+                    }
+                    text: {
+                        decoration: none;
+                        align: center;
+                    }
                     &:hover {
-                        text-decoration: 2px underline;
+                        text-decoration: 3px underline;
                     }
                 }
-                p {
-                    padding: 10px 0;
-                    color: $color1;
-                    text-align: left;
+                .post_description {
+                    color: $color2;
+
+                    font: {
+                        size: 20px;
+                        weight: 700;
+                    }
+                }
+                .post_date {
+                    color: $color2;
+
+                    font: {
+                        size: 15px;
+                        weight: 300;
+                    }
+                }
+                .post_tags {
+                    color: $post_tags;
+
+                    font: {
+                        size: 15px;
+                        weight: 300;
+                    }
                 }
             }
         }
@@ -156,26 +157,14 @@
             }
         }
     }
-
-    // max 820px media
-    @media (max-width: 820px) {
-        .post {
-            flex-direction: column !important;
-            align-items: center !important;
-            align-content: center !important;
-            justify-content: center !important;
-            max-width: 510px !important;
-            width: 100% !important;
-        }
-    }
 }
 
 // dark
 html.dark {
-    @include theme_template($dark, $light, $shadow_light, $placeholder_dark);
+    @include theme_template($dark, $light, $shadow_light, $placeholder_dark, $placeholder_light);
 }
 
 // light
 html.light {
-    @include theme_template($light, $dark, $shadow_dark, $placeholder_light);
+    @include theme_template($light, $dark, $shadow_dark, $placeholder_light, $placeholder_dark);
 }

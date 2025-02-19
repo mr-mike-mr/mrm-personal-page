@@ -2,17 +2,15 @@
 <script>
 	// import libs
 	import locales from "$lib/locales.json";
+	import projects from "$lib/projects_list.json";
 	// import stores
 	import { lang } from "$lib/stores/user_store.js";
-    // load data from +page.server.js
-    /** @type {import('./$types').PageProps} */
-	let { data } = $props();
 </script>
 
 <!-- PROJECTS ROOT -->
 <div class="projects_root">
-    {#if data.projects.length}
-        {#each data.projects as project}
+    {#if projects.list.length}
+        {#each projects.list as project}
             <div class="project">
                 <!-- IMAGE AND HEADING -->
                 <div>

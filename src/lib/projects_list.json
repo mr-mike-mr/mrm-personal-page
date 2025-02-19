@@ -1,0 +1,18 @@
+{
+    "list": [
+        {
+            "image": "reminder_of_important_dates.png",
+            "heading": "MRM Reminder of Important Dates",
+            "description_en": "Server application that notifies you of important dates. ",
+            "description_sk": "Serverová aplikácia, ktorá vás upozorňuje na dôležité dátumy. ",
+            "link": "https://github.com/mr-mike-mr/mrm-reminder-of-important-dates"
+        },
+        {
+            "image": "simple_chat_project.png",
+            "heading": "Simple Chat Project",
+            "description_en": "Simple and unencrypted python chat application with gui and cli version. ",
+            "description_sk": "Jednoduchá a nešifrovaná aplikácia python chat s verziou gui a cli.",
+            "link": "https://github.com/mr-mike-mr/simple-chat-app"
+        }
+    ]
+}

@@ -1240,52 +1240,39 @@ html.dark .blog_root .blog_search button img {
   width: auto;
   height: 100%;
 }
-html.dark .blog_root .post {
-  background-color: #F5F5F5;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
-  display: flex;
-  flex-direction: row;
-  align-content: flex-start;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  box-sizing: border-box;
-  width: 800px;
-  padding: 5px;
-  gap: 10px;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-html.dark .blog_root .post img {
-  width: 100% !important;
-  height: auto !important;
-  image-resolution: 16/9 !important;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-html.dark .blog_root .post div {
+html.dark .blog_root .posts {
+  max-width: 600px;
   width: 100%;
+}
+html.dark .blog_root .posts li {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+html.dark .blog_root .posts li a {
+  color: #F5F5F5;
+  font-size: 35px;
+  font-weight: 800;
+  text-decoration: none;
   text-align: center;
 }
-html.dark .blog_root .post div a {
-  color: #121212;
-  text-decoration: none;
+html.dark .blog_root .posts li a:hover {
+  -webkit-text-decoration: 3px underline;
+          text-decoration: 3px underline;
 }
-html.dark .blog_root .post div a:hover {
-  -webkit-text-decoration: 2px underline;
-          text-decoration: 2px underline;
+html.dark .blog_root .posts li .post_description {
+  color: #F5F5F5;
+  font-size: 20px;
+  font-weight: 700;
 }
-html.dark .blog_root .post div p {
-  padding: 10px 0;
-  color: #121212;
-  text-align: left;
+html.dark .blog_root .posts li .post_date {
+  color: #F5F5F5;
+  font-size: 15px;
+  font-weight: 300;
+}
+html.dark .blog_root .posts li .post_tags {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  font-weight: 300;
 }
 html.dark .blog_root button {
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
@@ -1327,16 +1314,6 @@ html.dark .blog_root button:active {
 html.dark .blog_root button img {
   width: auto;
   height: 90%;
-}
-@media (max-width: 820px) {
-  html.dark .post {
-    flex-direction: column !important;
-    align-items: center !important;
-    align-content: center !important;
-    justify-content: center !important;
-    max-width: 510px !important;
-    width: 100% !important;
-  }
 }
 
 html.light .blog_root {
@@ -1415,52 +1392,39 @@ html.light .blog_root .blog_search button img {
   width: auto;
   height: 100%;
 }
-html.light .blog_root .post {
-  background-color: #121212;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: row;
-  align-content: flex-start;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  box-sizing: border-box;
-  width: 800px;
-  padding: 5px;
-  gap: 10px;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-html.light .blog_root .post img {
-  width: 100% !important;
-  height: auto !important;
-  image-resolution: 16/9 !important;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-}
-html.light .blog_root .post div {
+html.light .blog_root .posts {
+  max-width: 600px;
   width: 100%;
+}
+html.light .blog_root .posts li {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+html.light .blog_root .posts li a {
+  color: #121212;
+  font-size: 35px;
+  font-weight: 800;
+  text-decoration: none;
   text-align: center;
 }
-html.light .blog_root .post div a {
-  color: #F5F5F5;
-  text-decoration: none;
+html.light .blog_root .posts li a:hover {
+  -webkit-text-decoration: 3px underline;
+          text-decoration: 3px underline;
 }
-html.light .blog_root .post div a:hover {
-  -webkit-text-decoration: 2px underline;
-          text-decoration: 2px underline;
+html.light .blog_root .posts li .post_description {
+  color: #121212;
+  font-size: 20px;
+  font-weight: 700;
 }
-html.light .blog_root .post div p {
-  padding: 10px 0;
-  color: #F5F5F5;
-  text-align: left;
+html.light .blog_root .posts li .post_date {
+  color: #121212;
+  font-size: 15px;
+  font-weight: 300;
+}
+html.light .blog_root .posts li .post_tags {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  font-weight: 300;
 }
 html.light .blog_root button {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -1502,14 +1466,4 @@ html.light .blog_root button:active {
 html.light .blog_root button img {
   width: auto;
   height: 90%;
-}
-@media (max-width: 820px) {
-  html.light .post {
-    flex-direction: column !important;
-    align-items: center !important;
-    align-content: center !important;
-    justify-content: center !important;
-    max-width: 510px !important;
-    width: 100% !important;
-  }
 }/*# sourceMappingURL=main.css.map */

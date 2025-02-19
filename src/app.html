@@ -36,6 +36,19 @@
 		<link rel="stylesheet" href="/styles/main.css">
 		<!-- svelte kit heads -->
 		%sveltekit.head%
+		<!-- theme load script -->
+		<script>
+			// get theme from local storage
+			const theme = localStorage.getItem("theme");
+
+			// if theme have value
+			if (theme) {
+				// add call list for html element
+				document.documentElement.classList.add(theme == "dark" ? "dark" : "light");
+				// remove call list for html element
+				document.documentElement.classList.remove(theme == "dark" ? "light" : "dark");
+			}
+		</script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>

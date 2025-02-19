@@ -49,8 +49,8 @@
 		document.documentElement.classList.add(dark_mode ? "dark" : "light");
 		// remove call list for html element
 		document.documentElement.classList.remove(dark_mode ? "light" : "dark");
-		// set theme cookie
-		set_cookie("theme", dark_mode ? "dark" : "light");
+		// set theme local storage
+		localStorage.setItem("theme", dark_mode ? "dark" : "light");
 	}
 
 	// callback when components are loaded
@@ -62,18 +62,17 @@
 		if (cookies_allowed) {
 			// get lang and theme cookie
 			let lang_cookie = Cookies.get("lang");
-			let theme_cookie = Cookies.get("theme");
-
-			// if lang/theme cookie have value
+			// if lang cookie have value
 			if (lang_cookie != undefined) lang.set($lang = lang_cookie);
-			if (theme_cookie != undefined) {
-				// if theme cookie have value "dark"
-				dark_mode = theme_cookie === "dark";
-				// add call list for html element
-				document.documentElement.classList.add(dark_mode ? "dark" : "light");
-				// remove call list for html element
-				document.documentElement.classList.remove(dark_mode ? "light" : "dark");
-			}
+		}
+
+		// get theme from local storage
+		const theme = localStorage.getItem("theme");
+
+		// if theme have value
+		if (theme) {
+			// dark mode is true when theme have vakue darj
+			dark_mode = theme === "dark"
 		}
 	});
 </script>
@@ -129,7 +128,7 @@
 			<!-- AGREE BUTTON -->
 			<button class="button" style="font-weight: 700 !important;" onclick={()=> {Cookies.set("cookie_allow", "true", { expires: 365, secure: true, sameSite:"strict", domain: window.location.hostname }); cookies_allowed = true;}}>{locales[$lang]["8"]}</button>
 			<!-- DISAGREE BUTTON -->
-			<button class="button"  onclick={()=> {Cookies.set("cookie_allow", "false", { expires: 1, secure: true, sameSite:"strict", domain: window.location.hostname }); cookies_allowed = false;}}>{locales[$lang]["9"]}</button>
+			<button class="button">{locales[$lang]["9"]}</button>
 		</div>
 	</div>
 {:else}
