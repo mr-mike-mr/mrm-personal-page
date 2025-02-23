@@ -58,7 +58,7 @@
                 <li>
                     <a href={blog_post.slug} target="_blank" class="post_title">{blog_post.title}</a>
                     <p class="post_description">{blog_post.description}</p>
-                    <p class="post_date">{blog_post.date}</p>
+                    <p class="post_date">{new Date(blog_post.date).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })}</p>
                     <p class="post_tags">{blog_post.tags.toString().replace(",", " ")}</p>
                 </li>
             </ul>

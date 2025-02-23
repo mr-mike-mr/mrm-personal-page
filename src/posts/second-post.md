@@ -8,6 +8,4 @@ tags:
 
 ---
 
-## Secon post
-
 This is my second post.

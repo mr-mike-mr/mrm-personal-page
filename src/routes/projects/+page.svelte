@@ -15,7 +15,7 @@
                 <!-- IMAGE AND HEADING -->
                 <div>
                     <!-- IMAGE -->
-                    <img alt="Project screenshot" src={"/projects/"+project.image} />
+                    <img alt="Project screenshot" src={`/projects/${project.image}`} />
                     <!-- HEADING -->
                     <h1>{project.heading}</h1>
                     <!-- DESCRIPTION -->

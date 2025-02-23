@@ -100,14 +100,16 @@
                     color: $color2;
 
                     font: {
+                        family: "Fira Code", serif;
                         size: 20px;
-                        weight: 700;
+                        weight: 600;
                     }
                 }
                 .post_date {
                     color: $color2;
 
                     font: {
+                        family: "Fira Code", serif;
                         size: 15px;
                         weight: 300;
                     }
@@ -116,8 +118,9 @@
                     color: $post_tags;
 
                     font: {
+                        family: "Fira Code", serif;
                         size: 15px;
-                        weight: 300;
+                        weight: 500;
                     }
                 }
             }
