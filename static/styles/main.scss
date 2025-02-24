@@ -3,7 +3,7 @@
 @import "fonts";
 
 // theme template
-@mixin theme_template($color1, $color2, $shadow_color, $placeholder) {
+@mixin theme_template($color1, $color2, $shadow_color, $placeholder, $post_tags) {
     // html
     background-color: $color1;
     color: $color2;
@@ -31,6 +31,7 @@
 
     // not_found_data
     .not_found_data {
+        color: $color2;
         width: 100%;
 
         text-align: center;
@@ -39,16 +40,32 @@
             weight: 800;
         }
     }
+
+    // page not found error
+    .page_not_found_error {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 65px 0px;
+
+        h1 {
+            color: $color2;
+        }
+        i {
+            color: $post_tags;
+        }
+    }
 }
 
 // dark
 html.dark {
-    @include theme_template($dark, $light, $shadow_light, $placeholder_dark);
+    @include theme_template($dark, $light, $shadow_light, $placeholder_dark, $placeholder_light);
 }
 
 // light
 html.light {
-    @include theme_template($light, $dark, $shadow_dark, $placeholder_light);
+    @include theme_template($light, $dark, $shadow_dark, $placeholder_light, $placeholder_dark);
 }
 
 // imports
@@ -58,3 +75,4 @@ html.light {
 @import "projects";
 @import "tech";
 @import "blog";
+@import "blog_post";

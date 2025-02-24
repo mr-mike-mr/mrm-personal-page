@@ -31,6 +31,7 @@
             </div>
         {/each}
     {:else}
+        <!-- NOT FOUND DATA -->
         <p class="not_found_data">{locales[$lang]["47"]}</p>
     {/if}
 </div>

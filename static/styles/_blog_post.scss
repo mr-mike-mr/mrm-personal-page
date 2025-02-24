@@ -1,0 +1,47 @@
+// import
+@import "colors";
+@import "mixins";
+
+// theme template
+@mixin theme_template($color1, $color2, $shadow_color, $placeholder, $post_tags) {
+    .blog_post {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        box-sizing: border-box;
+        max-width: 700px;
+        width: 100%;
+        padding: 65px 5px;
+
+        hgroup {
+            width: 100%;
+
+            .post_title, .post_description, .post_date {
+                color: $color2;
+            }
+            .post_tags {
+                color: $post_tags;
+            }
+        }
+        hr {
+            margin: 10px 0;
+            width: 100%;
+        }
+        .post_content {
+            width: 100%;
+        }
+    }
+}
+
+// dark
+html.dark {
+    @include theme_template($dark, $light, $shadow_light, $placeholder_dark, $placeholder_light);
+}
+
+// light
+html.light {
+    @include theme_template($light, $dark, $shadow_dark, $placeholder_light, $placeholder_dark);
+}

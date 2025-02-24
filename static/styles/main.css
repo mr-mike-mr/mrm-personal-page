@@ -38,6 +38,45 @@ footer {
   font-weight: 700;
 }
 
+.post_title {
+  font-size: 35px;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: left;
+}
+
+.post_description {
+  text-align: left;
+  font-family: "Fira Code", serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.post_date {
+  text-align: left;
+  font-family: "Fira Code", serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.post_tags {
+  text-align: left;
+  font-family: "Fira Code", serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.page_not_found_error h1 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 800;
+}
+.page_not_found_error i {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+
 html.dark {
   background-color: #121212;
   color: #F5F5F5;
@@ -58,10 +97,24 @@ html.dark body {
   align-items: center;
 }
 html.dark .not_found_data {
+  color: #F5F5F5;
   width: 100%;
   text-align: center;
   font-size: 25px;
   font-weight: 800;
+}
+html.dark .page_not_found_error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 65px 0px;
+}
+html.dark .page_not_found_error h1 {
+  color: #F5F5F5;
+}
+html.dark .page_not_found_error i {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 html.light {
@@ -84,10 +137,24 @@ html.light body {
   align-items: center;
 }
 html.light .not_found_data {
+  color: #121212;
   width: 100%;
   text-align: center;
   font-size: 25px;
   font-weight: 800;
+}
+html.light .page_not_found_error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 65px 0px;
+}
+html.light .page_not_found_error h1 {
+  color: #121212;
+}
+html.light .page_not_found_error i {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 html.dark header {
@@ -1240,42 +1307,26 @@ html.dark .blog_root .blog_search button img {
   width: auto;
   height: 100%;
 }
-html.dark .blog_root .posts {
+html.dark .blog_root .blog_posts {
   max-width: 600px;
   width: 100%;
 }
-html.dark .blog_root .posts li {
+html.dark .blog_root .blog_posts li {
   padding: 10px;
   margin-bottom: 15px;
 }
-html.dark .blog_root .posts li a {
+html.dark .blog_root .blog_posts li .post_title {
   color: #F5F5F5;
-  font-size: 35px;
-  font-weight: 800;
-  text-decoration: none;
-  text-align: center;
 }
-html.dark .blog_root .posts li a:hover {
+html.dark .blog_root .blog_posts li .post_title:hover {
   -webkit-text-decoration: 3px underline;
           text-decoration: 3px underline;
 }
-html.dark .blog_root .posts li .post_description {
+html.dark .blog_root .blog_posts li .post_description, html.dark .blog_root .blog_posts li .post_date {
   color: #F5F5F5;
-  font-family: "Fira Code", serif;
-  font-size: 20px;
-  font-weight: 600;
 }
-html.dark .blog_root .posts li .post_date {
-  color: #F5F5F5;
-  font-family: "Fira Code", serif;
-  font-size: 15px;
-  font-weight: 300;
-}
-html.dark .blog_root .posts li .post_tags {
+html.dark .blog_root .blog_posts li .post_tags {
   color: rgba(255, 255, 255, 0.5);
-  font-family: "Fira Code", serif;
-  font-size: 15px;
-  font-weight: 500;
 }
 html.dark .blog_root button {
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.25);
@@ -1395,42 +1446,26 @@ html.light .blog_root .blog_search button img {
   width: auto;
   height: 100%;
 }
-html.light .blog_root .posts {
+html.light .blog_root .blog_posts {
   max-width: 600px;
   width: 100%;
 }
-html.light .blog_root .posts li {
+html.light .blog_root .blog_posts li {
   padding: 10px;
   margin-bottom: 15px;
 }
-html.light .blog_root .posts li a {
+html.light .blog_root .blog_posts li .post_title {
   color: #121212;
-  font-size: 35px;
-  font-weight: 800;
-  text-decoration: none;
-  text-align: center;
 }
-html.light .blog_root .posts li a:hover {
+html.light .blog_root .blog_posts li .post_title:hover {
   -webkit-text-decoration: 3px underline;
           text-decoration: 3px underline;
 }
-html.light .blog_root .posts li .post_description {
+html.light .blog_root .blog_posts li .post_description, html.light .blog_root .blog_posts li .post_date {
   color: #121212;
-  font-family: "Fira Code", serif;
-  font-size: 20px;
-  font-weight: 600;
 }
-html.light .blog_root .posts li .post_date {
-  color: #121212;
-  font-family: "Fira Code", serif;
-  font-size: 15px;
-  font-weight: 300;
-}
-html.light .blog_root .posts li .post_tags {
+html.light .blog_root .blog_posts li .post_tags {
   color: rgba(0, 0, 0, 0.5);
-  font-family: "Fira Code", serif;
-  font-size: 15px;
-  font-weight: 500;
 }
 html.light .blog_root button {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -1472,4 +1507,62 @@ html.light .blog_root button:active {
 html.light .blog_root button img {
   width: auto;
   height: 90%;
+}
+
+html.dark .blog_post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  max-width: 700px;
+  width: 100%;
+  padding: 65px 5px;
+}
+html.dark .blog_post hgroup {
+  width: 100%;
+}
+html.dark .blog_post hgroup .post_title, html.dark .blog_post hgroup .post_description, html.dark .blog_post hgroup .post_date {
+  color: #F5F5F5;
+}
+html.dark .blog_post hgroup .post_tags {
+  color: rgba(255, 255, 255, 0.5);
+}
+html.dark .blog_post hr {
+  margin: 10px 0;
+  width: 100%;
+}
+html.dark .blog_post .post_content {
+  width: 100%;
+}
+
+html.light .blog_post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  max-width: 700px;
+  width: 100%;
+  padding: 65px 5px;
+}
+html.light .blog_post hgroup {
+  width: 100%;
+}
+html.light .blog_post hgroup .post_title, html.light .blog_post hgroup .post_description, html.light .blog_post hgroup .post_date {
+  color: #121212;
+}
+html.light .blog_post hgroup .post_tags {
+  color: rgba(0, 0, 0, 0.5);
+}
+html.light .blog_post hr {
+  margin: 10px 0;
+  width: 100%;
+}
+html.light .blog_post .post_content {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

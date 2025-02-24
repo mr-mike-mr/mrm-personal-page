@@ -14,8 +14,6 @@
         }
     }
 }
-
-
 h1, .line_text, .blog_post_heading {
     font: {
         size: 24px;
@@ -50,5 +48,55 @@ footer {
     font: {
         size: 10px;
         weight: 700;
+    }
+}
+.post_title {
+    font: {
+        size: 35px;
+        weight: 800;
+    }
+    text: {
+        decoration: none;
+        align: left;
+    }
+}
+.post_description {
+    text-align: left;
+    font: {
+        family: "Fira Code", serif;
+        size: 20px;
+        weight: 600;
+    }
+}
+.post_date {
+    text-align: left;
+    font: {
+        family: "Fira Code", serif;
+        size: 15px;
+        weight: 300;
+    }
+}
+.post_tags {
+    text-align: left;
+    font: {
+        family: "Fira Code", serif;
+        size: 15px;
+        weight: 500;
+    }
+}
+.page_not_found_error {
+    h1 {
+        text-align: center;
+        font: {
+            size: 45px;
+            weight: 800;
+        }
+    }
+    i {
+        text-align: center;
+        font: {
+            size: 25px;
+            weight: 500;
+        }
     }
 }
