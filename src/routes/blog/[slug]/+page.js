@@ -7,7 +7,7 @@ export async function load({ params }) {
     try {
         // dynamic import for post
         // TODO: ADD LOCALES
-        const post = await import(`../../posts/${params.slug}.md`);
+        const post = await import(`../../../posts/${params.slug}.md`);
 
         // return content and metadata
         return {
