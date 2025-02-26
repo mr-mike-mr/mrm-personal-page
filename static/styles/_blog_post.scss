@@ -1,6 +1,5 @@
 // import
-@import "colors";
-@import "mixins";
+@import 'colors';
 
 // theme template
 @mixin theme_template($color1, $color2, $shadow_color, $placeholder, $post_tags) {
@@ -38,10 +37,10 @@
 
 // dark
 html.dark {
-    @include theme_template($dark, $light, $shadow_light, $placeholder_dark, $placeholder_light);
+    @include theme_template($dark, $light, $shadow_light, $placeholder_dark, $blog_post_light);
 }
 
 // light
 html.light {
-    @include theme_template($light, $dark, $shadow_dark, $placeholder_light, $placeholder_dark);
+    @include theme_template($light, $dark, $shadow_dark, $placeholder_light, $blog_post_dark);
 }

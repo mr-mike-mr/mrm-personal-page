@@ -1,6 +1,6 @@
 // import
-@import "colors";
-@import "mixins";
+@import 'colors';
+@import 'mixins';
 
 // theme template
 @mixin theme_template($color1, $color2, $shadow_color, $placeholder) {
@@ -35,7 +35,7 @@
             gap: 10px;
 
             img {
-                box-shadow: 0px 4px 10px $shadow_color;
+                box-shadow: 0px 0px 10px $shadow_color;
                 width: 300px;
                 height: 300px;
                 margin: 0;
@@ -73,8 +73,10 @@
             gap: 10px;
 
             div {
-                background-color: $color2;
-                box-shadow: 0px 4px 10px $shadow_color;
+                background-color: $color1;
+                box-shadow: 0px 0px 10px $shadow_color;
+                display: flex;
+                flex-wrap: nowrap;
                 width: 150px;
                 padding: 5px 10px;
                 text-align: center;
@@ -84,18 +86,29 @@
                 -ms-border-radius: 50px;
                 -o-border-radius: 50px;
 
+                &:hover {
+                    background-color: $color2;
+
+                    a {
+                        color: $color1;
+                    }
+                    svg {
+                        path {
+                            fill: $color1;
+                        }
+                    }
+                }
                 svg {
                     width: 20px;
                     height: 20px;
-                    margin: 0 15px -3.5px 0;
 
                     path {
-                        fill: $color1;
+                        fill: $color2;
                     }
                 }
                 a {
-                    color: $color1;
-                    display: inline-block;
+                    color: $color2;
+                    width: 100%;
                     @include click_animation_transition(0.2);
 
                     font: {

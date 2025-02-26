@@ -1,6 +1,6 @@
 // imports
-@import "colors";
-@import "fonts";
+@import 'colors';
+@import 'fonts';
 
 // theme template
 @mixin theme_template($color1, $color2, $shadow_color, $placeholder, $post_tags) {
@@ -12,6 +12,7 @@
     * {
         margin: 0;
         padding: 0;
+        cursor: url(../cursor.cur), auto;
     }
 
     // html and body
@@ -69,10 +70,10 @@ html.light {
 }
 
 // imports
-@import "home_layout";
-@import "home";
-@import "skills";
-@import "projects";
-@import "tech";
-@import "blog";
-@import "blog_post";
+@import 'home_layout';
+@import 'home';
+@import 'skills';
+@import 'projects';
+@import 'tech';
+@import 'blog';
+@import 'blog_post';

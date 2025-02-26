@@ -5,9 +5,7 @@
 </script>
 
 <!-- PAGE NOT FOUND ERROR -->
-<div class="page_not_found_error">
-    <!-- HEADING -->
-    <h1>{page.error.message}</h1>
-    <!-- ITALIC -->
-    <i>{page.error.slug}</i>
+<div class='page_not_found_error'>
+    <h1>{page?.error?.message}</h1>
+    <i>{page?.error?.slug}</i>
 </div>

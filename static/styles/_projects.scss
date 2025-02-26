@@ -1,6 +1,6 @@
 // import
-@import "colors";
-@import "mixins";
+@import 'colors';
+@import 'mixins';
 
 // theme template
 @mixin theme_template($color1, $color2, $shadow_color, $placeholder) {
@@ -35,7 +35,7 @@
 
             div {
                 background-color: $color2;
-                box-shadow: 1px 1px 5px $color2;
+                box-shadow: 0px 0px 5px $color2;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
@@ -79,9 +79,9 @@
                 }
             }
             a {
-                color: $color1;
-                background-color: $color2;
-                box-shadow: 0px 4px 10px $shadow_color;
+                color: $placeholder;
+                background-color: $color1;
+                box-shadow: 0px 0px 10px $shadow_color;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -102,8 +102,12 @@
                 }
                 &:hover {
                     text-decoration: 2px underline;
+                    color: $color1;
+                    background-color: $color2;
                 }
                 &:active {
+                    color: $color1;
+                    background-color: $color2;
                     @include click_animation_scale(0.9);
                 }
             }
@@ -134,10 +138,10 @@
 
 // dark
 html.dark {
-    @include theme_template($dark, $light, $shadow_light, $placeholder_dark);
+    @include theme_template($dark, $light, $shadow_light, $placeholder_light);
 }
 
 // light
 html.light {
-    @include theme_template($light, $dark, $shadow_dark, $placeholder_light);
+    @include theme_template($light, $dark, $shadow_dark, $placeholder_dark);
 }
