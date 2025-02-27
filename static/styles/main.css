@@ -84,7 +84,7 @@ html.dark {
 html.dark * {
   margin: 0;
   padding: 0;
-  cursor: url(../cursor.cur), auto;
+  box-sizing: border-box;
 }
 html.dark, html.dark body {
   margin: 0;
@@ -125,7 +125,7 @@ html.light {
 html.light * {
   margin: 0;
   padding: 0;
-  cursor: url(../cursor.cur), auto;
+  box-sizing: border-box;
 }
 html.light, html.light body {
   margin: 0;
@@ -164,12 +164,12 @@ html.dark header {
   display: flex;
   justify-content: center;
   position: fixed;
-  box-sizing: border-box;
   top: 0;
   left: 0;
   z-index: 1000;
   width: 100vw;
   padding: 0 10px;
+  overflow: hidden;
 }
 html.dark header nav {
   background-color: #F5F5F5;
@@ -181,7 +181,7 @@ html.dark header nav {
   flex-wrap: nowrap;
   max-width: 900px;
   width: 100%;
-  height: 25px;
+  height: 35px;
   margin-top: 10px;
   padding: 5px 0;
   overflow: hidden;
@@ -193,15 +193,19 @@ html.dark header nav {
 }
 html.dark header nav .routes {
   display: flex;
+  flex-wrap: nowrap;
   list-style: none;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: scroll;
 }
 html.dark header nav .routes li a {
   color: #121212;
   display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   flex-wrap: nowrap;
-  margin: 0 15px;
+  height: 20px;
+  padding: 0 15px;
   text-decoration: none;
   transition: transform 0.2 ease;
   -webkit-transition: transform 0.2 ease;
@@ -221,21 +225,28 @@ html.dark header nav .routes li a:active {
   -o-transform: scale(0.9);
 }
 html.dark header nav .routes li a img {
-  width: 15px;
-  height: 15px;
-  margin: 2px 3px 0 0;
+  width: auto;
+  height: 100%;
+  padding: 0 5px;
 }
 html.dark header nav .page_settings {
   border-left: 2px #121212 solid;
-  height: 25px;
-  display: flex;
-  margin: 0;
-  padding: 0 5px 0 5px;
   list-style: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 25px;
+  margin: 0;
+  padding: 0 5px;
   gap: 10px;
+  overflow: hidden;
+}
+html.dark header nav .page_settings li {
+  display: flex;
+  justify-content: center;
 }
 html.dark header nav .page_settings li button {
-  margin-top: 2px;
   border: none;
   background-color: transparent;
   width: 20px;
@@ -245,7 +256,6 @@ html.dark header nav .page_settings li button {
   -moz-transition: transform 0.2 ease;
   -ms-transition: transform 0.2 ease;
   -o-transition: transform 0.2 ease;
-  padding: 0;
 }
 html.dark header nav .page_settings li button:active {
   transform: scale(0.9);
@@ -272,23 +282,18 @@ html.dark footer {
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
 }
-@media (max-width: 510px) {
-  html.dark .cookies_allow_request {
-    width: 300px !important;
-  }
-}
 
 html.light header {
   background-color: transparent;
   display: flex;
   justify-content: center;
   position: fixed;
-  box-sizing: border-box;
   top: 0;
   left: 0;
   z-index: 1000;
   width: 100vw;
   padding: 0 10px;
+  overflow: hidden;
 }
 html.light header nav {
   background-color: #121212;
@@ -300,7 +305,7 @@ html.light header nav {
   flex-wrap: nowrap;
   max-width: 900px;
   width: 100%;
-  height: 25px;
+  height: 35px;
   margin-top: 10px;
   padding: 5px 0;
   overflow: hidden;
@@ -312,15 +317,19 @@ html.light header nav {
 }
 html.light header nav .routes {
   display: flex;
+  flex-wrap: nowrap;
   list-style: none;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: scroll;
 }
 html.light header nav .routes li a {
   color: #F5F5F5;
   display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   flex-wrap: nowrap;
-  margin: 0 15px;
+  height: 20px;
+  padding: 0 15px;
   text-decoration: none;
   transition: transform 0.2 ease;
   -webkit-transition: transform 0.2 ease;
@@ -340,21 +349,28 @@ html.light header nav .routes li a:active {
   -o-transform: scale(0.9);
 }
 html.light header nav .routes li a img {
-  width: 15px;
-  height: 15px;
-  margin: 2px 3px 0 0;
+  width: auto;
+  height: 100%;
+  padding: 0 5px;
 }
 html.light header nav .page_settings {
   border-left: 2px #F5F5F5 solid;
-  height: 25px;
-  display: flex;
-  margin: 0;
-  padding: 0 5px 0 5px;
   list-style: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 25px;
+  margin: 0;
+  padding: 0 5px;
   gap: 10px;
+  overflow: hidden;
+}
+html.light header nav .page_settings li {
+  display: flex;
+  justify-content: center;
 }
 html.light header nav .page_settings li button {
-  margin-top: 2px;
   border: none;
   background-color: transparent;
   width: 20px;
@@ -364,7 +380,6 @@ html.light header nav .page_settings li button {
   -moz-transition: transform 0.2 ease;
   -ms-transition: transform 0.2 ease;
   -o-transition: transform 0.2 ease;
-  padding: 0;
 }
 html.light header nav .page_settings li button:active {
   transform: scale(0.9);
@@ -391,28 +406,24 @@ html.light footer {
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
 }
-@media (max-width: 510px) {
-  html.light .cookies_allow_request {
-    width: 300px !important;
-  }
-}
 
 html.dark .home_root {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 50px 0 35px 0;
+  padding: 60px 0 35px 0;
   gap: 20px;
 }
 html.dark .home_root h1 {
   font-size: 48px !important;
-  padding-top: 20px;
+  display: flex;
+  align-items: center;
 }
 html.dark .home_root h1 img {
-  width: 50px;
+  width: auto;
   height: 50px;
-  margin: 0 15px;
+  padding: 0 10px;
 }
 html.dark .home_root .pfp_text {
   display: flex;
@@ -423,7 +434,7 @@ html.dark .home_root .pfp_text {
   flex-wrap: wrap;
   width: 100%;
   min-width: 300px;
-  gap: 10px;
+  gap: 20px;
 }
 html.dark .home_root .pfp_text img {
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
@@ -454,43 +465,27 @@ html.dark .home_root .links {
   flex-wrap: wrap;
   min-width: 300px;
   max-width: 800px;
-  box-sizing: border-box;
   padding: 0 10px;
   gap: 10px;
 }
-html.dark .home_root .links div {
+html.dark .home_root .links a {
+  color: #F5F5F5;
   background-color: #121212;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.25);
   display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  flex-direction: row;
   flex-wrap: nowrap;
-  width: 150px;
-  padding: 5px 10px;
-  text-align: center;
+  width: 125px;
+  height: 30px;
+  padding: 6px;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-}
-html.dark .home_root .links div:hover {
-  background-color: #F5F5F5;
-}
-html.dark .home_root .links div:hover a {
-  color: #121212;
-}
-html.dark .home_root .links div:hover svg path {
-  fill: #121212;
-}
-html.dark .home_root .links div svg {
-  width: 20px;
-  height: 20px;
-}
-html.dark .home_root .links div svg path {
-  fill: #F5F5F5;
-}
-html.dark .home_root .links div a {
-  color: #F5F5F5;
-  width: 100%;
   transition: transform 0.2 ease;
   -webkit-transition: transform 0.2 ease;
   -moz-transition: transform 0.2 ease;
@@ -498,23 +493,35 @@ html.dark .home_root .links div a {
   -o-transition: transform 0.2 ease;
   font-size: 15px;
   font-weight: 600;
+  text-align: center;
   text-decoration: none;
 }
-html.dark .home_root .links div a:hover {
+html.dark .home_root .links a:hover {
+  background-color: #F5F5F5;
+  color: #121212;
   -webkit-text-decoration: 2px underline;
           text-decoration: 2px underline;
 }
-html.dark .home_root .links div a:active {
+html.dark .home_root .links a:hover svg path {
+  fill: #121212;
+}
+html.dark .home_root .links a:active {
   transform: scale(0.9);
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
   -o-transform: scale(0.9);
 }
+html.dark .home_root .links a svg {
+  width: 20px;
+  height: 20px;
+}
+html.dark .home_root .links a svg path {
+  fill: #F5F5F5;
+}
 @media (max-width: 618px) {
   html.dark .pfp_text div {
     padding: 0 10px;
-    box-sizing: border-box;
     max-width: 500px !important;
     width: 100% !important;
   }
@@ -525,17 +532,18 @@ html.light .home_root {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 50px 0 35px 0;
+  padding: 60px 0 35px 0;
   gap: 20px;
 }
 html.light .home_root h1 {
   font-size: 48px !important;
-  padding-top: 20px;
+  display: flex;
+  align-items: center;
 }
 html.light .home_root h1 img {
-  width: 50px;
+  width: auto;
   height: 50px;
-  margin: 0 15px;
+  padding: 0 10px;
 }
 html.light .home_root .pfp_text {
   display: flex;
@@ -546,7 +554,7 @@ html.light .home_root .pfp_text {
   flex-wrap: wrap;
   width: 100%;
   min-width: 300px;
-  gap: 10px;
+  gap: 20px;
 }
 html.light .home_root .pfp_text img {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -577,43 +585,27 @@ html.light .home_root .links {
   flex-wrap: wrap;
   min-width: 300px;
   max-width: 800px;
-  box-sizing: border-box;
   padding: 0 10px;
   gap: 10px;
 }
-html.light .home_root .links div {
+html.light .home_root .links a {
+  color: #121212;
   background-color: #F5F5F5;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  flex-direction: row;
   flex-wrap: nowrap;
-  width: 150px;
-  padding: 5px 10px;
-  text-align: center;
+  width: 125px;
+  height: 30px;
+  padding: 6px;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
-}
-html.light .home_root .links div:hover {
-  background-color: #121212;
-}
-html.light .home_root .links div:hover a {
-  color: #F5F5F5;
-}
-html.light .home_root .links div:hover svg path {
-  fill: #F5F5F5;
-}
-html.light .home_root .links div svg {
-  width: 20px;
-  height: 20px;
-}
-html.light .home_root .links div svg path {
-  fill: #121212;
-}
-html.light .home_root .links div a {
-  color: #121212;
-  width: 100%;
   transition: transform 0.2 ease;
   -webkit-transition: transform 0.2 ease;
   -moz-transition: transform 0.2 ease;
@@ -621,23 +613,35 @@ html.light .home_root .links div a {
   -o-transition: transform 0.2 ease;
   font-size: 15px;
   font-weight: 600;
+  text-align: center;
   text-decoration: none;
 }
-html.light .home_root .links div a:hover {
+html.light .home_root .links a:hover {
+  background-color: #121212;
+  color: #F5F5F5;
   -webkit-text-decoration: 2px underline;
           text-decoration: 2px underline;
 }
-html.light .home_root .links div a:active {
+html.light .home_root .links a:hover svg path {
+  fill: #F5F5F5;
+}
+html.light .home_root .links a:active {
   transform: scale(0.9);
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
   -o-transform: scale(0.9);
 }
+html.light .home_root .links a svg {
+  width: 20px;
+  height: 20px;
+}
+html.light .home_root .links a svg path {
+  fill: #121212;
+}
 @media (max-width: 618px) {
   html.light .pfp_text div {
     padding: 0 10px;
-    box-sizing: border-box;
     max-width: 500px !important;
     width: 100% !important;
   }
@@ -653,7 +657,6 @@ html.dark .skills_root {
   width: 100%;
   padding: 65px 5px 30px 5px;
   gap: 25px;
-  box-sizing: border-box;
 }
 html.dark .skills_root div {
   background-color: #121212;
@@ -727,7 +730,6 @@ html.light .skills_root {
   width: 100%;
   padding: 65px 5px 30px 5px;
   gap: 25px;
-  box-sizing: border-box;
 }
 html.light .skills_root div {
   background-color: #F5F5F5;
@@ -797,7 +799,6 @@ html.dark .projects_root {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  box-sizing: border-box;
   max-width: 1500px;
   width: 100%;
   overflow: visible;
@@ -810,7 +811,6 @@ html.dark .projects_root .project {
   justify-content: space-around;
   flex-direction: column;
   flex-wrap: nowrap;
-  box-sizing: border-box;
   width: 380px;
   padding: 10px;
   border-radius: 25px;
@@ -921,7 +921,6 @@ html.light .projects_root {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  box-sizing: border-box;
   max-width: 1500px;
   width: 100%;
   overflow: visible;
@@ -934,7 +933,6 @@ html.light .projects_root .project {
   justify-content: space-around;
   flex-direction: column;
   flex-wrap: nowrap;
-  box-sizing: border-box;
   width: 380px;
   padding: 10px;
   border-radius: 25px;
@@ -1232,7 +1230,6 @@ html.dark .blog_root {
   align-content: center;
   justify-content: center;
   flex-wrap: nowrap;
-  box-sizing: border-box;
   width: 100vw;
   padding: 60px 10px;
   gap: 10px;
@@ -1246,7 +1243,6 @@ html.dark .blog_root .blog_search {
   align-content: center;
   justify-content: center;
   flex-wrap: nowrap;
-  box-sizing: border-box;
   max-width: 700px;
   width: 100%;
   height: 30px;
@@ -1273,7 +1269,6 @@ html.dark .blog_root .blog_search:focus-within input::placeholder {
 }
 html.dark .blog_root .blog_search input {
   color: #F5F5F5;
-  box-sizing: border-box;
   max-width: 700px;
   width: 100%;
   height: 25px;
@@ -1289,7 +1284,6 @@ html.dark .blog_root .blog_search input::placeholder {
 }
 html.dark .blog_root .blog_search button {
   background-color: transparent;
-  box-sizing: border-box;
   border: none;
   width: 20px;
   height: 20px;
@@ -1341,7 +1335,6 @@ html.light .blog_root {
   align-content: center;
   justify-content: center;
   flex-wrap: nowrap;
-  box-sizing: border-box;
   width: 100vw;
   padding: 60px 10px;
   gap: 10px;
@@ -1355,7 +1348,6 @@ html.light .blog_root .blog_search {
   align-content: center;
   justify-content: center;
   flex-wrap: nowrap;
-  box-sizing: border-box;
   max-width: 700px;
   width: 100%;
   height: 30px;
@@ -1382,7 +1374,6 @@ html.light .blog_root .blog_search:focus-within input::placeholder {
 }
 html.light .blog_root .blog_search input {
   color: #121212;
-  box-sizing: border-box;
   max-width: 700px;
   width: 100%;
   height: 25px;
@@ -1398,7 +1389,6 @@ html.light .blog_root .blog_search input::placeholder {
 }
 html.light .blog_root .blog_search button {
   background-color: transparent;
-  box-sizing: border-box;
   border: none;
   width: 20px;
   height: 20px;
@@ -1450,7 +1440,6 @@ html.dark .blog_post {
   align-content: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  box-sizing: border-box;
   max-width: 700px;
   width: 100%;
   padding: 65px 5px;
@@ -1479,7 +1468,6 @@ html.light .blog_post {
   align-content: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  box-sizing: border-box;
   max-width: 700px;
   width: 100%;
   padding: 65px 5px;

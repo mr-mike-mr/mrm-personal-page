@@ -2,7 +2,7 @@
 <script>
 	// import assets
 	import home_emoji from '$lib/assets/emojis/home_emoji.png';
-	import graduation_cap_emoji from '$lib/assets/emojis/graduation_cap_emoji.png';
+	import light_bulb_emoji from '$lib/assets/emojis/light_bulb_emoji.png';
 	import framed_picture_emoji from '$lib/assets/emojis/framed_picture_emoji.png';
 	import computer_emoji from '$lib/assets/emojis/computer_emoji.png';
 	import globe_emoji from '$lib/assets/emojis/globe_emoji.png';
@@ -12,6 +12,7 @@
 	import sun_emoji from '$lib/assets/emojis/sun_emoji.png';
 	// import svelte libs
 	import { onMount } from 'svelte';
+	import { innerWidth } from 'svelte/reactivity/window';
 	// import libs
 	import locales from '$lib/locales.json';
 	// import stores
@@ -20,7 +21,6 @@
 	// get layout children
 	let { children } = $props();
 
-	// vars
 	let dark_mode = $state(true);
 
 	// func for change web site language
@@ -68,7 +68,7 @@
 		<!-- ROUTS LIST -->
 		<ul class='routes'>
 			<li><a href='/'><img alt='Home emoji' src={home_emoji} />{locales[$lang]['1']}</a></li>
-			<li><a href='/skills'><img alt='Graduation cap emoji' src={graduation_cap_emoji} />{locales[$lang]['2']}</a></li>
+			<li><a href='/skills'><img alt='Graduation cap emoji' src={light_bulb_emoji} />{locales[$lang]['2']}</a></li>
 			<li><a href='/projects'><img alt='Frame emoji' src={framed_picture_emoji} />{locales[$lang]['3']}</a></li>
 			<li><a href='/tech'><img alt='Computer emoji' src={computer_emoji} />{locales[$lang]['4']}</a></li>
 			<li><a href='/blog'><img alt='Globe emoji' src={globe_emoji} />{locales[$lang]['5']}</a></li>

@@ -11,7 +11,6 @@
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-        box-sizing: border-box;
         max-width: 1500px;
         width: 100%;
         overflow: visible;
@@ -24,7 +23,6 @@
             justify-content: space-around;
             flex-direction: column;
             flex-wrap: nowrap;
-            box-sizing: border-box;
             width: 380px;
             padding: 10px;
             border-radius: 25px;
