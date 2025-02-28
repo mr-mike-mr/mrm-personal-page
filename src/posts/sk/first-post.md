@@ -1,17 +1,17 @@
 ---
-title: First post
-description: This is my first post.
+title: Prvý príspevok
+description: Toto je môj prvý príspevok.
 date: 2025-3-19
 tags:
     - post
     - test
 ---
-## Hello
+## Ahoj
 
-This is my first post.
+Toto je môj prvý príspevok.
 
 ```js
-console.log('Hello world!');
+console.log('Ahoj svet!');
 ```
 
 - test
@@ -40,13 +40,11 @@ console.log('Hello world!');
 
 ---
 
-code.log("Hello world!");
-
 **asdasdas**
 *gdhdfg*
 
 ~~hgdferterdsf~~
 
-[trytwerwer](http://localhost:5173/first-post "This is link")
+[trytwerwer](http://localhost:5173/first-post "Toto je odkaz")
 
-![example](mike-pfp.jpg)
+![example](/mike-pfp.jpg)

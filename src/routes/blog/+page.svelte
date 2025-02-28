@@ -2,8 +2,6 @@
 <script>
 	// import assets
 	import magnifying_glass_emoji from '$lib/assets/emojis/magnifying_glass_emoji.png';
-	// import svelte libs
-	import { onMount } from 'svelte';
 	// import libs
 	import locales from '$lib/locales.json';
 	// import stores
@@ -22,17 +20,11 @@
         post.tags = tags;
     })
 
-    // TODO: search bar + pagination
+    // TODO: search bar
     let blog_post_search_text = $state('');
 
-    // save reference for input element for autofocus
-    let autofocus_input;
-
-	// callback when components are loaded
-    onMount(() => {
-        // autofocus on input element
-        autofocus_input?.focus();
-    });
+    // TODO: pagination
+    let blog_page = $state(0);
 </script>
 
 <!-- BLOG ROOT -->
@@ -40,7 +32,7 @@
     <!-- BLOG SEARCH -->
     <form class='blog_search'>
         <!-- INPUT -->
-    	<input class='blog_search_bar' type='text' bind:this={autofocus_input} bind:value={blog_post_search_text} autocomplete='off' autocorrect='off' placeholder={locales[$lang]['45']}/>
+    	<input class='blog_search_bar' type='text' bind:value={blog_post_search_text} autocomplete='off' autocorrect='off' placeholder={locales[$lang]['45']}/>
         <!-- BUTTON -->
         <button><img alt='Magnifying glass emoji' src={magnifying_glass_emoji} /></button>
     </form>

@@ -2,11 +2,14 @@
 import { error } from '@sveltejs/kit'
 
 // LOAD FUNCTION
-export async function load({ params }) {
+export async function load({ params, url }) {
     // TRY
     try {
-        // dynamic import for post
-        const post = await import(`../../../posts/${params.slug}.md`);
+        // get lang param from url
+        const lang = await url.searchParams.get('lang') || 'en';
+
+        // dynamic import for post by lang
+        const post = await import(`../../../posts/${lang}/${params.slug}.md`);
 
         return {
             content: post.default,

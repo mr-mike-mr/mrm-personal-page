@@ -15,6 +15,7 @@
 	import { innerWidth } from 'svelte/reactivity/window';
 	// import libs
 	import locales from '$lib/locales.json';
+	import { set_url_params } from '$lib/url_parameters';
 	// import stores
 	import { lang } from '$lib/stores/user_store.js';
 
@@ -25,9 +26,8 @@
 
 	// func for change web site language
 	async function change_language() {
-		// if lang var is 'en'
 		if ($lang === 'en') {
-			// change lang in store and cookie
+			// change lang in stores
 			lang.set($lang = 'sk');
 			localStorage.setItem('lang', 'sk');
 		} else {
@@ -35,6 +35,9 @@
 			lang.set($lang = 'en');
 			localStorage.setItem('lang', 'en');
 		}
+
+		// refresh page
+		location.reload(true);
 	}
 
 	// func for change  theme
@@ -58,6 +61,9 @@
 		// set lang and theme
 		if (lang_store) lang.set($lang = lang_store);
 		if (theme_store) dark_mode = theme_store === 'dark';
+
+		// set url param lang
+		set_url_params('lang', lang_store);
 	});
 </script>
 
@@ -71,7 +77,7 @@
 			<li><a href='/skills'><img alt='Graduation cap emoji' src={light_bulb_emoji} />{locales[$lang]['2']}</a></li>
 			<li><a href='/projects'><img alt='Frame emoji' src={framed_picture_emoji} />{locales[$lang]['3']}</a></li>
 			<li><a href='/tech'><img alt='Computer emoji' src={computer_emoji} />{locales[$lang]['4']}</a></li>
-			<li><a href='/blog'><img alt='Globe emoji' src={globe_emoji} />{locales[$lang]['5']}</a></li>
+			<li><a href={`/blog?lang=${$lang}`}><img alt='Globe emoji' src={globe_emoji} />{locales[$lang]['5']}</a></li>
 		</ul>
 
 		<!-- PAGE SETTINGS LIST -->
