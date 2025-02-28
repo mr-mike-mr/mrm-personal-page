@@ -3,10 +3,6 @@
     // get props from +page.js
 	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
-
-    // for each tags from metadata
-    const tags = [];
-    data.meta.tags.forEach(tag => tags.push(`#${tag}`) );
 </script>
 
 <!-- HEAD -->
@@ -25,7 +21,7 @@
     <hgroup>
         <h1 class='post_title'>{data.meta.title}</h1>
         <p class='post_date'>{new Date(data.meta.date).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })}</p>
-        <p class='post_tags'>{tags.toString().replace(',', ' ')}</p>
+        <p class='post_tags'>{data.meta.tags_string}</p>
     </hgroup>
 
     <!-- BREAK LINE -->

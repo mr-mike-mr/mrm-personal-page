@@ -15,7 +15,7 @@
 	import { innerWidth } from 'svelte/reactivity/window';
 	// import libs
 	import locales from '$lib/locales.json';
-	import { set_url_params } from '$lib/url_parameters';
+	import { set_url_params } from '$lib/utilities.js';
 	// import stores
 	import { lang } from '$lib/stores/user_store.js';
 
@@ -23,6 +23,8 @@
 	let { children } = $props();
 
 	let dark_mode = $state(true);
+	let change_lang_cooldown = $state(false);
+	let change_theme_cooldown = $state(false);
 
 	// func for change web site language
 	async function change_language() {
@@ -42,7 +44,11 @@
 
 	// func for change  theme
 	async function change_theme() {
-		dark_mode = await !dark_mode;
+        // cooldown
+		change_theme_cooldown = true;
+		setTimeout(() => change_theme_cooldown = false, 500);
+
+		dark_mode = !dark_mode;
 
 		// add call list for html element
 		document.documentElement.classList.add(dark_mode ? 'dark' : 'light');
@@ -54,6 +60,10 @@
 
 	// callback when components are loaded
 	onMount(() => {
+        // cooldown
+		change_lang_cooldown = true;
+		setTimeout(() => change_lang_cooldown = false, 1500);
+
 		// get lang and theme from local store
 		const lang_store = localStorage.getItem('lang');
 		const theme_store = localStorage.getItem('theme');
@@ -63,7 +73,7 @@
 		if (theme_store) dark_mode = theme_store === 'dark';
 
 		// set url param lang
-		set_url_params('lang', lang_store);
+		set_url_params('lang', lang_store, true);
 	});
 </script>
 
@@ -77,14 +87,14 @@
 			<li><a href='/skills'><img alt='Graduation cap emoji' src={light_bulb_emoji} />{locales[$lang]['2']}</a></li>
 			<li><a href='/projects'><img alt='Frame emoji' src={framed_picture_emoji} />{locales[$lang]['3']}</a></li>
 			<li><a href='/tech'><img alt='Computer emoji' src={computer_emoji} />{locales[$lang]['4']}</a></li>
-			<li><a href={`/blog?lang=${$lang}`}><img alt='Globe emoji' src={globe_emoji} />{locales[$lang]['5']}</a></li>
+			<li><a href={`/blog?lang=${$lang}&page=1&search=`}><img alt='Globe emoji' src={globe_emoji} />{locales[$lang]['5']}</a></li>
 		</ul>
 
 		<!-- PAGE SETTINGS LIST -->
 		<ul class='page_settings'>
 			<!-- CHANGE LANGUAGE -->
 			<li>
-				<button onclick={change_language}>
+				<button onclick={change_language} disabled={change_lang_cooldown}>
 					{#if $lang === 'en'}
 						<img alt='Flag US emoji' src={flag_us_emoji} />
 					{:else}
@@ -95,7 +105,7 @@
 
 			<!-- CHANGE THEME -->
 			<li>
-				<button onclick={change_theme}>
+				<button onclick={change_theme} disabled={change_theme_cooldown}>
 					{#if dark_mode}
 						<img alt='Moon emoji' src={moon_emoji} />
 					{:else}
