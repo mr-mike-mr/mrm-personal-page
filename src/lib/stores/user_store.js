@@ -2,4 +2,4 @@
 import { writable } from 'svelte/store';
 
 // global vars
-export const lang = writable('en')
+export const lang = writable('en');

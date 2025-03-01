@@ -42,7 +42,7 @@
 		location.reload(true);
 	}
 
-	// func for change  theme
+	// func for change theme
 	async function change_theme() {
         // cooldown
 		change_theme_cooldown = true;

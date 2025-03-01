@@ -10,8 +10,8 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 60px 0 35px 0;
-        gap: 20px;
+        padding: 60px 0 45px 0;
+        gap: 30px;
 
         h1 {
             font-size: 48px !important;
@@ -124,6 +124,52 @@
                 }
             }
         }
+
+        .stats_and_widgets {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 20px;
+            gap: 35px;
+
+            .stats {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                gap: 35px;
+
+                img {
+                    box-shadow: 0px 0px 15px $shadow_color;
+                    height: 165px;
+                    width: auto;
+
+                }
+            }
+            .widgets {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                gap: 35px;
+
+                img, iframe {
+                    box-shadow: 0px 0px 15px $shadow_color;
+                    height: 400px;
+                    width: auto;
+                }
+            }
+        }
     }
 
     // max 618px media
@@ -133,6 +179,18 @@
                 padding: 0 10px;
                 max-width: 500px !important;
                 width: 100% !important;
+            }
+        }
+    }
+    // max 410px media
+    @media (max-width: 410px) {
+        .stats_and_widgets {
+            .stats {
+                .github_profile_stats {
+                    height: auto !important;
+                    width: 100% !important;
+                    max-width: 395.15px !important
+                }
             }
         }
     }

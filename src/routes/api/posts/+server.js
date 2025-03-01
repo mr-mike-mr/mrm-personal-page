@@ -24,12 +24,12 @@ async function getPosts(url = '') {
         const metadata = file.metadata;
         if (search) {
             // split search by word space into array and filter out empty strings
-            const search_words = search.split(/\s+/).filter(word => word.trim() !== "");
+            const search_words = search.split(/\s+/).filter(word => word.trim() !== '');
 
             // normalize search words (remove diacritics and escape special characters)
             const normalized_search_words = search_words.map(word =>
                 // remove diacritic from word
-                word.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+                word.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
             );
 
             // create dynamic regex pattern
@@ -37,9 +37,9 @@ async function getPosts(url = '') {
             const search_regex = new RegExp(search_regex_pattern, 'gi');
 
             // remove diacritic from metadatas
-            const normalized_title = metadata.title.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            const normalized_description = metadata.description.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            const normalized_tags = metadata.tags.map(tag => tag.normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
+            const normalized_title = metadata.title.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const normalized_description = metadata.description.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const normalized_tags = metadata.tags.map(tag => tag.normalize('NFD').replace(/[\u0300-\u036f]/g, ''));
 
             // search options for match posts
             const has_match = (
@@ -68,7 +68,13 @@ async function getPosts(url = '') {
         (first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
     )
 
-    return posts;
+    // get start index for posts slice
+    const page_post_start_index = (page - 1) * 10;
+
+    return {
+        posts: posts.slice( page_post_start_index , page_post_start_index+10 ),
+        remaining_pages: ~~(posts.length / 10) + 1
+    };
 }
 
 /** @type {import('./$types').RequestHandler} */

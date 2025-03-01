@@ -2,7 +2,7 @@
 <script>
 	// import libs
 	import locales from '$lib/locales.json';
-	import projects from '$lib/projects_list.json';
+	import projects from '$lib/lists/projects_list.json';
 	// import stores
     import { lang } from '$lib/stores/user_store.js';
 </script>

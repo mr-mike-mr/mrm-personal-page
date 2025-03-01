@@ -101,6 +101,33 @@
                 }
             }
         }
+        .pagination {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            width: 100%;
+            gap: 10px;
+
+            button {
+                background-color: transparent;
+                border: none;
+                width: 20px;
+                height: 20px;
+                padding: 0;
+                @include click_animation_transition(0.2);
+
+                &:active {
+                    @include click_animation_scale(0.9);
+                }
+                img {
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
     }
 }
 

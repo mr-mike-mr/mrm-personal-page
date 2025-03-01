@@ -32,7 +32,7 @@
             -o-border-radius: 25px;
 
             div {
-                background-color: $color2;
+                background-color: $color1;
                 box-shadow: 0px 0px 5px $color2;
                 display: flex;
                 align-items: center;
@@ -41,7 +41,6 @@
                 flex-wrap: nowrap;
                 width: 380px;
                 height: 400px;
-                padding: 5px 7px;
                 border-radius: 25px;
                 -webkit-border-radius: 25px;
                 -moz-border-radius: 25px;
@@ -59,21 +58,16 @@
                     -ms-border-radius: 20px 20px 0 0;
                     -o-border-radius: 20px 20px 0 0;
                 }
+                h1, p {
+                    color: $color2;
+                    width: 100%;
+                    padding: 5px 10px;
+                }
                 h1 {
-                    color: $color1;
-                    margin: 5px 0;
-
-                    text: {
-                        align: center;
-                    }
+                    text-align: center;
                 }
                 p {
-                    color: $color1;
-                    padding: 10px 0;
-
-                    text: {
-                        align: left;
-                    }
+                    text-align: left;
                 }
             }
             a {

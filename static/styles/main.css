@@ -412,8 +412,8 @@ html.dark .home_root {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 60px 0 35px 0;
-  gap: 20px;
+  padding: 60px 0 45px 0;
+  gap: 30px;
 }
 html.dark .home_root h1 {
   font-size: 48px !important;
@@ -519,11 +519,59 @@ html.dark .home_root .links a svg {
 html.dark .home_root .links a svg path {
   fill: #F5F5F5;
 }
+html.dark .home_root .stats_and_widgets {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+  gap: 35px;
+}
+html.dark .home_root .stats_and_widgets .stats {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 35px;
+}
+html.dark .home_root .stats_and_widgets .stats img {
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.25);
+  height: 165px;
+  width: auto;
+}
+html.dark .home_root .stats_and_widgets .widgets {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 35px;
+}
+html.dark .home_root .stats_and_widgets .widgets img, html.dark .home_root .stats_and_widgets .widgets iframe {
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.25);
+  height: 400px;
+  width: auto;
+}
 @media (max-width: 618px) {
   html.dark .pfp_text div {
     padding: 0 10px;
     max-width: 500px !important;
     width: 100% !important;
+  }
+}
+@media (max-width: 410px) {
+  html.dark .stats_and_widgets .stats .github_profile_stats {
+    height: auto !important;
+    width: 100% !important;
+    max-width: 395.15px !important;
   }
 }
 
@@ -532,8 +580,8 @@ html.light .home_root {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 60px 0 35px 0;
-  gap: 20px;
+  padding: 60px 0 45px 0;
+  gap: 30px;
 }
 html.light .home_root h1 {
   font-size: 48px !important;
@@ -639,11 +687,59 @@ html.light .home_root .links a svg {
 html.light .home_root .links a svg path {
   fill: #121212;
 }
+html.light .home_root .stats_and_widgets {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+  gap: 35px;
+}
+html.light .home_root .stats_and_widgets .stats {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 35px;
+}
+html.light .home_root .stats_and_widgets .stats img {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  height: 165px;
+  width: auto;
+}
+html.light .home_root .stats_and_widgets .widgets {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 35px;
+}
+html.light .home_root .stats_and_widgets .widgets img, html.light .home_root .stats_and_widgets .widgets iframe {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+  height: 400px;
+  width: auto;
+}
 @media (max-width: 618px) {
   html.light .pfp_text div {
     padding: 0 10px;
     max-width: 500px !important;
     width: 100% !important;
+  }
+}
+@media (max-width: 410px) {
+  html.light .stats_and_widgets .stats .github_profile_stats {
+    height: auto !important;
+    width: 100% !important;
+    max-width: 395.15px !important;
   }
 }
 
@@ -820,7 +916,7 @@ html.dark .projects_root .project {
   -o-border-radius: 25px;
 }
 html.dark .projects_root .project div {
-  background-color: #F5F5F5;
+  background-color: #121212;
   box-shadow: 0px 0px 5px #F5F5F5;
   display: flex;
   align-items: center;
@@ -829,7 +925,6 @@ html.dark .projects_root .project div {
   flex-wrap: nowrap;
   width: 380px;
   height: 400px;
-  padding: 5px 7px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -848,14 +943,15 @@ html.dark .projects_root .project div img {
   -ms-border-radius: 20px 20px 0 0;
   -o-border-radius: 20px 20px 0 0;
 }
+html.dark .projects_root .project div h1, html.dark .projects_root .project div p {
+  color: #F5F5F5;
+  width: 100%;
+  padding: 5px 10px;
+}
 html.dark .projects_root .project div h1 {
-  color: #121212;
-  margin: 5px 0;
   text-align: center;
 }
 html.dark .projects_root .project div p {
-  color: #121212;
-  padding: 10px 0;
   text-align: left;
 }
 html.dark .projects_root .project a {
@@ -942,7 +1038,7 @@ html.light .projects_root .project {
   -o-border-radius: 25px;
 }
 html.light .projects_root .project div {
-  background-color: #121212;
+  background-color: #F5F5F5;
   box-shadow: 0px 0px 5px #121212;
   display: flex;
   align-items: center;
@@ -951,7 +1047,6 @@ html.light .projects_root .project div {
   flex-wrap: nowrap;
   width: 380px;
   height: 400px;
-  padding: 5px 7px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
@@ -970,14 +1065,15 @@ html.light .projects_root .project div img {
   -ms-border-radius: 20px 20px 0 0;
   -o-border-radius: 20px 20px 0 0;
 }
+html.light .projects_root .project div h1, html.light .projects_root .project div p {
+  color: #121212;
+  width: 100%;
+  padding: 5px 10px;
+}
 html.light .projects_root .project div h1 {
-  color: #F5F5F5;
-  margin: 5px 0;
   text-align: center;
 }
 html.light .projects_root .project div p {
-  color: #F5F5F5;
-  padding: 10px 0;
   text-align: left;
 }
 html.light .projects_root .project a {
@@ -1327,6 +1423,39 @@ html.dark .blog_root .blog_posts li .post_description, html.dark .blog_root .blo
 html.dark .blog_root .blog_posts li .post_tags {
   color: rgba(255, 255, 255, 0.5);
 }
+html.dark .blog_root .pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 10px;
+}
+html.dark .blog_root .pagination button {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
+}
+html.dark .blog_root .pagination button:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+html.dark .blog_root .pagination button img {
+  width: auto;
+  height: 100%;
+}
 
 html.light .blog_root {
   display: flex;
@@ -1431,6 +1560,39 @@ html.light .blog_root .blog_posts li .post_description, html.light .blog_root .b
 }
 html.light .blog_root .blog_posts li .post_tags {
   color: rgba(0, 0, 0, 0.5);
+}
+html.light .blog_root .pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 10px;
+}
+html.light .blog_root .pagination button {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transition: transform 0.2 ease;
+  -webkit-transition: transform 0.2 ease;
+  -moz-transition: transform 0.2 ease;
+  -ms-transition: transform 0.2 ease;
+  -o-transition: transform 0.2 ease;
+}
+html.light .blog_root .pagination button:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+html.light .blog_root .pagination button img {
+  width: auto;
+  height: 100%;
 }
 
 html.dark .blog_post {

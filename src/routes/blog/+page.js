@@ -5,7 +5,7 @@ export async function load({ fetch, url }) {
     const search = url.searchParams.get('search') || '';
 
     // fetch api/posts from params
-    const response = await fetch(`api/posts?_lang=${lang}&_page={page}&_search=${search}`);
+    const response = await fetch(`api/posts?_lang=${lang}&_page=${page}&_search=${search}`);
 
     // save respons in json
     const posts = await response.json();
