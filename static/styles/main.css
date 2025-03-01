@@ -162,6 +162,8 @@ html.light .page_not_found_error i {
 html.dark header {
   background-color: transparent;
   display: flex;
+  align-items: center;
+  align-content: center;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -169,6 +171,7 @@ html.dark header {
   z-index: 1000;
   width: 100vw;
   padding: 0 10px;
+  margin-top: 10px;
   overflow: hidden;
 }
 html.dark header nav {
@@ -182,7 +185,6 @@ html.dark header nav {
   max-width: 900px;
   width: 100%;
   height: 35px;
-  margin-top: 10px;
   padding: 5px 0;
   overflow: hidden;
   border-radius: 25px;
@@ -192,10 +194,15 @@ html.dark header nav {
   -o-border-radius: 25px;
 }
 html.dark header nav .routes {
-  display: flex;
-  flex-wrap: nowrap;
   list-style: none;
-  overflow: scroll;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  height: 25px;
+  overflow: hidden;
+  gap: 13px;
 }
 html.dark header nav .routes li a {
   color: #121212;
@@ -205,7 +212,6 @@ html.dark header nav .routes li a {
   justify-content: center;
   flex-wrap: nowrap;
   height: 20px;
-  padding: 0 15px;
   text-decoration: none;
   transition: transform 0.2 ease;
   -webkit-transition: transform 0.2 ease;
@@ -226,8 +232,8 @@ html.dark header nav .routes li a:active {
 }
 html.dark header nav .routes li a img {
   width: auto;
-  height: 100%;
-  padding: 0 5px;
+  height: 18px;
+  padding: 0 3px;
 }
 html.dark header nav .page_settings {
   border-left: 2px #121212 solid;
@@ -247,9 +253,8 @@ html.dark header nav .page_settings li {
   justify-content: center;
 }
 html.dark header nav .page_settings li button {
-  border: none;
   background-color: transparent;
-  width: 20px;
+  border: none;
   height: 20px;
   transition: transform 0.2 ease;
   -webkit-transition: transform 0.2 ease;
@@ -286,6 +291,8 @@ html.dark footer {
 html.light header {
   background-color: transparent;
   display: flex;
+  align-items: center;
+  align-content: center;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -293,6 +300,7 @@ html.light header {
   z-index: 1000;
   width: 100vw;
   padding: 0 10px;
+  margin-top: 10px;
   overflow: hidden;
 }
 html.light header nav {
@@ -306,7 +314,6 @@ html.light header nav {
   max-width: 900px;
   width: 100%;
   height: 35px;
-  margin-top: 10px;
   padding: 5px 0;
   overflow: hidden;
   border-radius: 25px;
@@ -316,10 +323,15 @@ html.light header nav {
   -o-border-radius: 25px;
 }
 html.light header nav .routes {
-  display: flex;
-  flex-wrap: nowrap;
   list-style: none;
-  overflow: scroll;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  height: 25px;
+  overflow: hidden;
+  gap: 13px;
 }
 html.light header nav .routes li a {
   color: #F5F5F5;
@@ -329,7 +341,6 @@ html.light header nav .routes li a {
   justify-content: center;
   flex-wrap: nowrap;
   height: 20px;
-  padding: 0 15px;
   text-decoration: none;
   transition: transform 0.2 ease;
   -webkit-transition: transform 0.2 ease;
@@ -350,8 +361,8 @@ html.light header nav .routes li a:active {
 }
 html.light header nav .routes li a img {
   width: auto;
-  height: 100%;
-  padding: 0 5px;
+  height: 18px;
+  padding: 0 3px;
 }
 html.light header nav .page_settings {
   border-left: 2px #F5F5F5 solid;
@@ -371,9 +382,8 @@ html.light header nav .page_settings li {
   justify-content: center;
 }
 html.light header nav .page_settings li button {
-  border: none;
   background-color: transparent;
-  width: 20px;
+  border: none;
   height: 20px;
   transition: transform 0.2 ease;
   -webkit-transition: transform 0.2 ease;
@@ -562,7 +572,7 @@ html.dark .home_root .stats_and_widgets .widgets img, html.dark .home_root .stat
 }
 @media (max-width: 618px) {
   html.dark .pfp_text div {
-    padding: 0 10px;
+    padding: 0 10px !important;
     max-width: 500px !important;
     width: 100% !important;
   }
@@ -730,7 +740,7 @@ html.light .home_root .stats_and_widgets .widgets img, html.light .home_root .st
 }
 @media (max-width: 618px) {
   html.light .pfp_text div {
-    padding: 0 10px;
+    padding: 0 10px !important;
     max-width: 500px !important;
     width: 100% !important;
   }
@@ -1175,7 +1185,7 @@ html.dark .tech_root .tech_container div {
   flex-direction: column;
   flex-wrap: nowrap;
   width: 150px;
-  height: 150px;
+  height: 160px;
   padding: 10px;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -1268,7 +1278,7 @@ html.light .tech_root .tech_container div {
   flex-direction: column;
   flex-wrap: nowrap;
   width: 150px;
-  height: 150px;
+  height: 160px;
   padding: 10px;
   border-radius: 25px;
   -webkit-border-radius: 25px;

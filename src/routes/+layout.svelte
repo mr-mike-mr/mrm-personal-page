@@ -2,7 +2,7 @@
 <script>
 	// import assets
 	import home_emoji from '$lib/assets/emojis/home_emoji.png';
-	import light_bulb_emoji from '$lib/assets/emojis/light_bulb_emoji.png';
+	import book_emoji from '$lib/assets/emojis/book_emoji.png';
 	import framed_picture_emoji from '$lib/assets/emojis/framed_picture_emoji.png';
 	import computer_emoji from '$lib/assets/emojis/computer_emoji.png';
 	import globe_emoji from '$lib/assets/emojis/globe_emoji.png';
@@ -22,6 +22,7 @@
 	// get layout children
 	let { children } = $props();
 
+	let window_width = $state(671);
 	let dark_mode = $state(true);
 	let change_lang_cooldown = $state(false);
 	let change_theme_cooldown = $state(false);
@@ -77,17 +78,45 @@
 	});
 </script>
 
+<!-- GET SVELTE WINDOW WIDTH -->
+<svelte:window bind:innerWidth={window_width} />
+
 <!-- HEADER -->
 <header>
 	<!-- NAV -->
 	<nav>
 		<!-- ROUTS LIST -->
 		<ul class='routes'>
-			<li><a href='/'><img alt='Home emoji' src={home_emoji} />{locales[$lang]['1']}</a></li>
-			<li><a href='/skills'><img alt='Graduation cap emoji' src={light_bulb_emoji} />{locales[$lang]['2']}</a></li>
-			<li><a href='/projects'><img alt='Frame emoji' src={framed_picture_emoji} />{locales[$lang]['3']}</a></li>
-			<li><a href='/tech'><img alt='Computer emoji' src={computer_emoji} />{locales[$lang]['4']}</a></li>
-			<li><a href={`/blog?lang=${$lang}&page=1&search=`}><img alt='Globe emoji' src={globe_emoji} />{locales[$lang]['5']}</a></li>
+			<li>
+				<a href='/' title={ locales[$lang]['1'] }>
+					<img alt='Home emoji' src={ home_emoji } />
+					{ window_width > 600 ? locales[$lang]['1'] : '' }
+				</a>
+			</li>
+			<li>
+				<a href='/skills' title={ locales[$lang]['2'] }>
+					<img alt='Book emoji' src={ book_emoji } />
+					{ window_width > 600 ? locales[$lang]['2'] : '' }
+				</a>
+			</li>
+			<li>
+				<a href='/projects' title={ locales[$lang]['3'] }>
+					<img alt='Frame emoji' src={ framed_picture_emoji } />
+					{ window_width > 600 ? locales[$lang]['3'] : '' }
+				</a>
+			</li>
+			<li>
+				<a href='/tech' title={ locales[$lang]['4'] }>
+					<img alt='Computer emoji' src={ computer_emoji } />
+					{ window_width > 600 ? locales[$lang]['4'] : '' }
+				</a>
+			</li>
+			<li>
+				<a href={`/blog?lang=${$lang}&page=1&search=`} title={ locales[$lang]['5'] }>
+					<img alt='Globe emoji' src={ globe_emoji } />
+					{ window_width > 600 ? locales[$lang]['5'] : '' }
+				</a>
+			</li>
 		</ul>
 
 		<!-- PAGE SETTINGS LIST -->

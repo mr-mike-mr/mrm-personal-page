@@ -19,6 +19,6 @@
         {/each}
     {:else}
         <!-- NOT FOUND DATA MESSAGE -->
-        <p class='not_found_data'>{locales[$lang]['47']}</p>
+        <p class='not_found_data'>{locales[$lang]['49']}</p>
     {/if}
 </div>

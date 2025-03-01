@@ -21,11 +21,7 @@
                     <!-- HEADING -->
                     <h1>{project.heading}</h1>
                     <!-- DESCRIPTION -->
-                    {#if $lang === 'en'} <!-- if english lang selected -->
-                        <p>{project.description_en}</p>
-                    {:else if $lang === 'sk'} <!-- if slovak lang selected -->
-                        <p>{project.description_sk}</p>
-                    {/if}
+                    <p>{ $lang === 'en' ? project.description_en : project.description_sk }</p>
 
                 </div>
                 <!-- LINK -->

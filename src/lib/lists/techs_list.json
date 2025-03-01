@@ -1,0 +1,196 @@
+{
+    "lines": [
+        {
+            "id": "pc",
+            "title_en": "PC",
+            "title_sk": "Počítač"
+        },
+        {
+            "id": "accessory",
+            "title_en": "Accessory",
+            "title_sk": "Príslušenstvo"
+        },
+        {
+            "id": "every_day_carry",
+            "title_en": "Every day carry",
+            "title_sk": "Každodenné nosenie"
+        },
+        {
+            "id": "home_server",
+            "title_en": "Home server",
+            "title_sk": "Domáci server"
+        }
+    ],
+    "tech_list": {
+        "pc": [
+            {
+                "image": "case.png",
+                "link": "https://www.coolermaster.com/en-global/products/masterbox-q300l/",
+                "title_en": "Case",
+                "title_sk": "Skriňa"
+            },
+            {
+                "image": "fans.png",
+                "link": "https://www.arctic.de/en/P12-PWM/ACFAN00119A",
+                "title_en": "Fans",
+                "title_sk": "Ventilátory"
+            },
+            {
+                "image": "motherboard.png",
+                "link": "https://www.asus.com/motherboards-components/motherboards/prime/prime-a320m-k/",
+                "title_en": "Motherboard",
+                "title_sk": "Základná doska"
+            },
+            {
+                "image": "cpu.png",
+                "link": "https://www.techpowerup.com/cpu-specs/ryzen-3-1200.c1899",
+                "title_en": "CPU",
+                "title_sk": "Procesor"
+            },
+            {
+                "image": "cpu_cooler.png",
+                "link": "https://www.arctic.de/en/Alpine-23/ACALP00035A",
+                "title_en": "Cooler",
+                "title_sk": "Chladič"
+            },
+            {
+                "image": "ram.png",
+                "link": "https://www.kingston.com/en/memory/gaming/kingston-fury-beast-ddr4-memory?speed=2666mt%2Fs&total%20(kit)%20capacity=16gb&kit=kit%20of%202&dram%20density=8gbit",
+                "title_en": "RAM",
+                "title_sk": "Pamäť"
+            },
+            {
+                "image": "gpu.png",
+                "link": "https://www.msi.com/Graphics-Card/GeForce-GTX-1060-ARMOR-6G-OCV1/Specification",
+                "title_en": "GPU",
+                "title_sk": "Grafická karta"
+            },
+            {
+                "image": "ssd.png",
+                "link": "https://www.gigabyte.com/SSD/GIGABYTE-Gen3-2500E-SSD-500GB",
+                "title_en": "SSD",
+                "title_sk": "SSD disk"
+            },
+            {
+                "image": "psu.png",
+                "link": "https://www.silverstonetek.com/en/product/info/power-supplies/ST60F-ES230/",
+                "title_en": "PSU",
+                "title_sk": "Zdroj"
+            }
+        ],
+        "accessory": [
+            {
+                "image": "main_monitor.png",
+                "link": "https://www.msi.com/Business-Productivity-Monitor/PRO-MP225",
+                "title_en": "Main monitor",
+                "title_sk": "Hlavný monitor"
+            },
+            {
+                "image": "second_monitor.png",
+                "link": "https://www.amazon.com/Dell-UltraSharp-Widescreen-Performance-DisplayPort/dp/B00302DNZ4",
+                "title_en": "Secondary monitor",
+                "title_sk": "Vedľajší monitor"
+            },
+            {
+                "image": "monitor_holder.png",
+                "link": "https://drziaky-a-stojany-na-tv-a-monitory.heureka.sk/stell-sos-1720/#prehlad/",
+                "title_en": "Monitor holders",
+                "title_sk": "Držiak na monitor"
+            },
+            {
+                "image": "led_light_strip.png",
+                "link": "https://www.sonoff.sk/kategoria/svetla-a-ziarovky/sonoff-l2-lite-pasik-5m-interierovy-rgb-wifi-led-pasik/",
+                "title_en": "LED strip",
+                "title_sk": "LED pásik"
+            },
+            {
+                "image": "keyboard.png",
+                "link": "https://allegro.cz/nabidka/mechanicka-klavesnice-chimera-wireless-16889209861?utm_medium=detail_redirect&utm_source=czc_detail&utm_campaign=kompaktni_klavesnice",
+                "title_en": "Keyboard",
+                "title_sk": "Klávesnica"
+            },
+            {
+                "image": "keycaps.png",
+                "link": "https://darkproject.eu/product/87-fuji?model=DPO87_GSH_FUJI_ANSI",
+                "title_en": "Keycaps",
+                "title_sk": "Keycaps"
+            },
+            {
+                "image": "switches.png",
+                "link": "https://www.gateron.co/products/gateron-phantom-switch-set",
+                "title_en": "Switches",
+                "title_sk": "Spínače"
+            },
+            {
+                "image": "mouse.png",
+                "link": "https://www.msi.com/Gaming-Gear/CLUTCH-DM07",
+                "title_en": "Mouse",
+                "title_sk": "Myš"
+            },
+            {
+                "image": "mouse_pad.png",
+                "link": "https://hyperx.com/products/hyperx-pulsefire-mat-gaming-mouse-pad-l?variant=42135502749853",
+                "title_en": "Mouse pad",
+                "title_sk": "Podložka pod myš"
+            },
+            {
+                "image": "microphone.png",
+                "link": "https://www.trust.com/en/product/23791-gxt-212-mico-usb-microphone",
+                "title_en": "Microphone",
+                "title_sk": "Mikrofón"
+            },
+            {
+                "image": "headphone.png",
+                "link": "https://steelseries.com/gaming-headsets/arctis-nova-1x",
+                "title_en": "Headphone",
+                "title_sk": "Slúchadlá na uši"
+            },
+            {
+                "image": "usb_hub.png",
+                "link": "https://axagon.eu/sk/produkty/hue-p1a",
+                "title_en": "USB hub",
+                "title_sk": "USB rozbočovač"
+            }
+        ],
+        "every_day_carry": [
+            {
+                "image": "phone.png",
+                "link": "https://mobilne-telefony.heureka.sk/oppo-reno7-lite-5g-8gb-128gb",
+                "title_en": "Phone",
+                "title_sk": "Telefón"
+            },
+            {
+                "image": "earphone.png",
+                "link": "https://cmf.tech/en-sk/pages/buds-pro",
+                "title_en": "Earphone",
+                "title_sk": "Slúchadlá do uší"
+            }
+        ],
+        "home_server": [
+            {
+                "image": "rpi.png",
+                "link": "https://www.raspberrypi.com/products/raspberry-pi-4-model-b/",
+                "title_en": "Raspberry Pi",
+                "title_sk": "Raspberry Pi"
+            },
+            {
+                "image": "rpi_cooler.png",
+                "link": "https://shop.pimoroni.com/products/aluminium-heatsink-case-for-raspberry-pi-4?variant=29430673178707",
+                "title_en": "Cooler",
+                "title_sk": "Chladič"
+            },
+            {
+                "image": "rpi_hdd.png",
+                "link": "https://www.ebay.com/itm/224900061136",
+                "title_en": "HDD",
+                "title_sk": "HDD disk"
+            },
+            {
+                "image": "hdd_reduction.png",
+                "link": "https://axagon.eu/sk/produkty/adsa-fp2",
+                "title_en": "HDD reduction",
+                "title_sk": "Redukcia disku"
+            }
+        ]
+    }
+}

@@ -124,7 +124,6 @@
                 }
             }
         }
-
         .stats_and_widgets {
             display: flex;
             align-items: center;
@@ -176,7 +175,7 @@
     @media (max-width: 618px) {
         .pfp_text {
             div {
-                padding: 0 10px;
+                padding: 0 10px !important;
                 max-width: 500px !important;
                 width: 100% !important;
             }
