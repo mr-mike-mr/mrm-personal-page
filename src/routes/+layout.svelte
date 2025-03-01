@@ -74,7 +74,7 @@
 		if (theme_store) dark_mode = theme_store === 'dark';
 
 		// set url param lang
-		set_url_params('lang', lang_store, true);
+		set_url_params('lang', lang_store || 'en', true);
 	});
 </script>
 
