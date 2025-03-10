@@ -3,9 +3,13 @@
 	// import libs
 	import locales from '$lib/locales.json';
 	import projects from '$lib/lists/projects_list.json';
+    import SvelteSeo from "svelte-seo";
 	// import stores
     import { lang } from '$lib/stores/user_store.js';
 </script>
+
+<!-- SEO -->
+<SvelteSeo title = "Projects | Mike Personal Page"/>
 
 <!-- PROJECTS ROOT -->
 <div class='projects_root'>

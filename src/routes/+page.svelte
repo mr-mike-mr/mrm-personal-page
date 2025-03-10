@@ -5,9 +5,24 @@
 	import waving_hand_emoji from '$lib/assets/emojis/waving_hand_emoji.png';
 	// import libs
 	import locales from '$lib/locales.json';
+    import SvelteSeo from "svelte-seo";
 	// import stores
 	import { lang } from '$lib/stores/user_store.js';
 </script>
+
+<!-- SEO -->
+<SvelteSeo title = "Home | Mike Personal Page"/>
+
+<!-- HEAD -->
+<svelte:head>
+    <!-- TITLE -->
+    <title>Mike</title>
+    <!-- OPEN GRAPH TAGS -->
+    <meta property='og:type' content='website'>
+    <meta property='og:iamge' content='mike-pfp.jpg'>
+    <meta property='og:title' content='$mr.mike - personal page'>
+    <meta property='og:description' content='Hi my name is Mike and if you want to find out more about me click on the link.'>
+</svelte:head>
 
 <!-- HOME ROOT -->
 <div class='home_root'>

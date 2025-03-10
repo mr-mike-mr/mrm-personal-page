@@ -9,6 +9,7 @@
 	// import libs
 	import locales from '$lib/locales.json';
     import { set_url_params } from '$lib/utilities';
+    import SvelteSeo from "svelte-seo";
 	// import stores
 	import { lang } from '$lib/stores/user_store.js';
 
@@ -72,6 +73,9 @@
         current_blog_page = page;
 	});
 </script>
+
+<!-- SEO -->
+<SvelteSeo title = "Blog | Mike Personal Page"/>
 
 <!-- BLOG ROOT -->
 <div class='blog_root'>

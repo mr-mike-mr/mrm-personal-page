@@ -1,19 +1,27 @@
 <!-- SCRIPT -->
 <script>
+    // import libs
+    import SvelteSeo from "svelte-seo";
+
     // get props from +page.js
 	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 </script>
 
-<!-- HEAD -->
-<svelte:head>
-    <!-- TITLE -->
-    <title>{data.meta.title}</title>
-    <!-- OPEN GRAPH TAGS -->
-    <meta property='og:type' content='article'>
-    <meta property='og:title' content={data.meta.title}>
-    <meta property='og:description' content={data.meta.description}>
-</svelte:head>
+<!-- SEO -->
+<SvelteSeo
+    title = {`${data.meta.title} | Mike Personal Page`}
+    description = {data.meta.description}
+    openGraph = {{
+        title: `${data.meta.title} | Mike Personal Page`,
+        description: data.meta.description,
+      }}
+
+    twitter={{
+        title: `${data.meta.title} | Mike Personal Page`,
+        description: data.meta.description,
+    }}
+/>
 
 <!-- BLOG POST -->
 <article class='blog_post'>

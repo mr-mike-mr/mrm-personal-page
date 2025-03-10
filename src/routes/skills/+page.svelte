@@ -3,9 +3,13 @@
 	// import libs
 	import locales from '$lib/locales.json';
 	import skills from '$lib/lists/skills_list.json';
+    import SvelteSeo from "svelte-seo";
 	// import stores
 	import { lang } from '$lib/stores/user_store.js';
 </script>
+
+<!-- SEO -->
+<SvelteSeo title = "Skills | Mike Personal Page"/>
 
 <!-- SKILLS ROOT -->
 <div class='skills_root'>

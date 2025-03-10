@@ -16,16 +16,25 @@
 	// import libs
 	import locales from '$lib/locales.json';
 	import { set_url_params } from '$lib/utilities.js';
+    import SvelteSeo from "svelte-seo";
 	// import stores
 	import { lang } from '$lib/stores/user_store.js';
 
 	// get layout children
 	let { children } = $props();
 
-	let window_width = $state(671);
+	let window_width = $state(481);
+	let min_window_width = 480
 	let dark_mode = $state(true);
 	let change_lang_cooldown = $state(false);
 	let change_theme_cooldown = $state(false);
+
+	// seo vars
+	const seo = {
+		"title": "Mike Personal Page",
+		"description": "Hi my name is Mike and if you want to find out more about me click on the link.",
+		"url": "https://personal-page-mrm.netlify.app/"
+	}
 
 	// func for change web site language
 	async function change_language() {
@@ -78,6 +87,30 @@
 	});
 </script>
 
+<!-- SEO -->
+<SvelteSeo
+    title = {seo.title}
+    description = {seo.description}
+    canonical = {seo.url}
+    keywords = "personal page, blog, developer, dev, software, programming, tech, technology, personal blog"
+    openGraph = {{
+        title: seo.title,
+        description: seo.description,
+        image: "seo_banner.png",
+        url: seo.url,
+        type: "website",
+        site_name: "Mike Personal Page",
+      }}
+
+    twitter={{
+        card: "summary_large_image",
+        site: "@mrm.dev",
+        title: seo.title,
+        description: seo.description,
+        image: "seo_banner.png",
+    }}
+/>
+
 <!-- GET SVELTE WINDOW WIDTH -->
 <svelte:window bind:innerWidth={window_width} />
 
@@ -90,31 +123,31 @@
 			<li>
 				<a href='/' title={ locales[$lang]['1'] }>
 					<img alt='Home emoji' src={ home_emoji } />
-					{ window_width > 600 ? locales[$lang]['1'] : '' }
+					{ window_width > min_window_width ? locales[$lang]['1'] : '' }
 				</a>
 			</li>
 			<li>
 				<a href='/skills' title={ locales[$lang]['2'] }>
 					<img alt='Book emoji' src={ book_emoji } />
-					{ window_width > 600 ? locales[$lang]['2'] : '' }
+					{ window_width > min_window_width ? locales[$lang]['2'] : '' }
 				</a>
 			</li>
 			<li>
 				<a href='/projects' title={ locales[$lang]['3'] }>
 					<img alt='Frame emoji' src={ framed_picture_emoji } />
-					{ window_width > 600 ? locales[$lang]['3'] : '' }
+					{ window_width > min_window_width ? locales[$lang]['3'] : '' }
 				</a>
 			</li>
 			<li>
 				<a href='/tech' title={ locales[$lang]['4'] }>
 					<img alt='Computer emoji' src={ computer_emoji } />
-					{ window_width > 600 ? locales[$lang]['4'] : '' }
+					{ window_width > min_window_width ? locales[$lang]['4'] : '' }
 				</a>
 			</li>
 			<li>
 				<a href={`/blog?lang=${$lang}&page=1&search=`} title={ locales[$lang]['5'] }>
 					<img alt='Globe emoji' src={ globe_emoji } />
-					{ window_width > 600 ? locales[$lang]['5'] : '' }
+					{ window_width > min_window_width ? locales[$lang]['5'] : '' }
 				</a>
 			</li>
 		</ul>
