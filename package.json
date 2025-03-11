@@ -17,5 +17,8 @@
 		"svelte": "^5.0.0",
 		"svelte-seo": "^1.6.1",
 		"vite": "^5.4.11"
+	},
+	"dependencies": {
+		"@bitmachina/highlighter": "^1.0.0-alpha.6"
 	}
 }

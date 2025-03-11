@@ -84,6 +84,74 @@ footer {
         weight: 500;
     }
 }
+.post_content {
+    h2 {
+        text-align: left;
+        font: {
+            size: 35px;
+            weight: 800;
+        }
+    }
+    p {
+        text-align: left;
+        font: {
+            size: 16px;
+            weight: 300;
+        }
+    }
+    strong {
+        font: {
+            size: 16px;
+            weight: 800;
+        }
+    }
+    em, del {
+        font: {
+            size: 16px;
+            weight: 100;
+        }
+    }
+    pre {
+        code {
+            span {
+                span {
+                    font: {
+                        size: 16px;
+                        weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    table {
+        th {
+            font: {
+                size: 16px;
+                weight: 800;
+            }
+        }
+        td {
+            font: {
+                size: 16px;
+                weight: 300;
+            }
+        }
+    }
+    ul, ol {
+        li {
+            font: {
+                size: 16px;
+                weight: 300;
+            }
+        }
+    }
+    a {
+        font: {
+            size: 16px;
+            weight: 800;
+        }
+    }
+}
 .page_not_found_error {
     h1 {
         text-align: center;
