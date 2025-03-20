@@ -12,7 +12,6 @@
     - [Setup](#setup)
   - [Usage](#usage)
     - [Basic Usage](#basic-usage)
-    - [Advanced Configuration](#advanced-configuration)
   - [Contributing](#contributing)
     - [How to Contribute](#how-to-contribute)
   - [Testing](#testing)
@@ -68,10 +67,6 @@ pm2 start build/index.js --name "mrm-personal-page"
 ```
 
 Visit [domain](http://localhost:3000/) in your browser.
-
-### Advanced Configuration
-
-1. Config option 1: Description.
 
 ## Contributing
 
