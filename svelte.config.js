@@ -1,4 +1,5 @@
-import adapter from '@sveltejs/adapter-netlify';
+//import adapter from '@sveltejs/adapter-node'; // NODE ADAPTER
+import adapter from '@sveltejs/adapter-netlify'; // NETLIFY ADAPTER
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import { createHighlighter } from "@bitmachina/highlighter";
